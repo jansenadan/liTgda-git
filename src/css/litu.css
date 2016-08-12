@@ -1,0 +1,3429 @@
+/*  Esta hoja de estilos está construida con la lógica Mobile first  */
+@charset "UTF-8";
+/* CSS Document */
+/*=TIPOGRAFÍA=*/
+html {
+	font-size: 12px;
+	height: 100vh;
+}
+/*Declaración de fuentes*/
+/*Gotham Rounded Bold*/
+@font-face {
+	font-family: 'GothamRounded';
+	src: url('../fuentes/GothamRounded-Medium/GothamRounded-Medium.eot?#iefix') format('embedded-opentype'), url('../fuentes/GothamRounded-Medium/GothamRounded-Medium.otf') format('opentype'),  url('../fuentes/GothamRounded-Medium/GothamRounded-Medium.woff') format('woff'), url('../fuentes/GothamRounded-Medium/GothamRounded-Medium.ttf') format('truetype'), url('../fuentes/GothamRounded-Medium/GothamRounded-Medium.svg#GothamRounded-Medium') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+/*Gotham Rounded 400*/
+@font-face {
+	font-family: 'GothamRounded';
+	src: url('../fuentes/GothamRounded-Book/GothamRounded-Book.eot?#iefix') format('embedded-opentype'), url('../fuentes/GothamRounded-Book/GothamRounded-Book.otf') format('opentype'),  url('../fuentes/GothamRounded-Book/GothamRounded-Book.woff') format('woff'), url('../fuentes/GothamRounded-Book/GothamRounded-Book.ttf') format('truetype'), url('../fuentes/GothamRounded-Book/GothamRounded-Book.svg#GothamRounded-Book') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+/*=======================
+=====PALETA DE COLOR====
+========================*/
+/*
+AZUL PRINCIPAL: #4c54fc;
+VINOTINTO : #b80d80;
+AMARILLO : #fcf474;
+AGUAMARINA : #37e7db;
+CREMA (Fondo) : #fff2d8;
+LILA (Similar al azul): #5c4de6; 
+ */
+
+
+body {
+	background-color: #fff2d8;
+	color: #4c54fc;
+	font: normal 400 2.1rem/1.2 'Gotham Rounded', 'GothamRounded', 'Quicksans', sans-serif;
+	height: 100%;
+	/*overflow: hidden;*/
+	text-align: center;
+}
+a {
+	color: #ff00ab;
+	text-decoration: none; 
+}
+
+
+/*=======================
+=====ESTILOS DE TEXTO====
+========================*/
+h1, h2, h3, h4, h5, h6/*, p*/ {
+	font-weight: 400;
+	/*text-align: center;*/
+	margin: 0;/*Para resetear márgenes*/
+	/*margin: 0.9em 0;*/
+}
+p {
+	font-size: 2.2rem;
+	margin-bottom: 3.25vh;
+    margin-top: 3.25vh;
+}
+.txt-l {
+	font-size: 3.3rem;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+.frase-cursiva {
+	font-family: 'Caveat', cursive;
+	font-size: 7.2rem;
+}
+
+/*Pantallas tipo Cuestionario*/
+.preg, .page .ui > h3 {
+	font-size: 3.5rem;
+}
+.preg .preg-grande {
+	font-family: 'Caveat', cursive;
+	font-size: 7.5rem;
+}
+.pre-preg, .page .ui > h4 {
+	font-size: 2.5rem;
+}
+.indicacion {
+	font-size: 2.1rem;
+}
+.btn-txt {
+	font-size: 1.5rem;
+}
+.btn-txt-l {
+	font-size: 2.1rem;
+}
+.btn-txt-hover {
+	font-size: 1.3rem;
+}
+/*Pantallas tipo Rectángulo*/
+.rect h2 {
+	font-family: 'Caveat', cursive;
+	font-size: 11.1rem;
+}
+.rect p,
+.bola p {
+	font-size: 2.2rem;
+}
+.rect .txt-l,
+.bola .txt-l {
+	font-size: 3.3rem;
+}
+.rect .frase-cursiva,
+.bola .frase-cursiva {
+	font-family: 'Caveat', cursive;
+	font-size: 7.2rem;
+}
+
+
+
+nav {
+	left: 0;
+	/*position: absolute;*/
+	top: 0;
+	width: 100vw;
+	height: 0px;
+}
+nav .izq, nav .der, nav.vertical .pArr, nav.vertical .pAba {
+	border: 2px solid #4c54fc;
+	border-radius: 60%;
+	cursor: pointer;
+	height: 1.8rem;
+	position: fixed;
+	top: calc(50vh - 0.9rem);
+	transition: all 500ms ease-out;
+	width: 1.8rem;
+	z-index: 999;
+}
+nav .izq span, nav .der span, nav.vertical .pArr span, nav.vertical .pAba span {
+	display: none;
+}
+nav .izq::after, nav .der::after, nav.vertical .pArr::after, nav.vertical .pAba::after {
+	background: url("../img/ui-flecha.png") center/auto 45% no-repeat;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+nav .izq::after {
+    transform: rotate(180deg);
+}
+nav .izq {
+	left: 0.05rem;
+}
+nav .der {
+	right: 0.05rem;
+}
+
+/*   ++++ Navegación Vertical ++++  */
+nav.vertical {
+	position: absolute;
+}
+nav.vertical .pArr, nav.vertical .pAba {
+	position: absolute;
+	left: calc(50vw - 0.9rem);
+}
+nav.vertical .pArr {
+	top: 0.05rem;
+}
+nav.vertical .pArr::after {
+    transform: rotate(-90deg);
+}
+nav.vertical .pAba {
+	top: calc(100vh - 1.85rem);
+}
+nav.vertical .pAba::after {
+    transform: rotate(90deg);
+}
+/*   ++++ Navegación Vertical END ++++  */
+label {
+	cursor: pointer;
+}
+.transition {
+	transition: all 500ms ease-out;
+}
+#mainWrapper, #amor {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+}
+/*#mainWrapper {
+	overflow: hidden;
+}
+#amor {
+	overflow-y: auto;
+	overflow-x: hidden;
+}*/
+.page {
+	background: #FFF1D8;
+	display: table;
+	height: 100vh;
+	left: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	/*overflow: hidden;*/
+	/*padding: 5vh 15%; */
+	padding: 0;
+	position: absolute;
+	top: 0;
+	vertical-align: middle;
+	width: 100%;
+}
+.alerta {
+	display: none;
+}
+.alerta.active {
+	background: #fcf474;
+	border: 3px solid #4c54fc;
+	border-radius: 0 0 8px 8px;
+	display: block;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -15px;
+	padding: 20px;
+	position: fixed;
+	top: 1vh;
+	width: 300px;
+	z-index: 99999999;
+}
+.page > h2,
+.page > h3,
+.page .ui > h2,
+.page .ui > h3 {
+	font-size: 3.5rem;
+	/*font-weight: 700;Juan*/
+}
+.page .ui {
+	display: table-cell;
+	height: 100vh;
+	position: relative;
+	vertical-align: middle;
+	width: 100vw;
+}
+.page .formuHide {
+	display: none;
+}
+.page .opciones {
+	margin: 0 auto;
+	position: relative;
+	width: 80%;
+}
+.page .opciones::after {
+	clear: both;
+	content: " ";
+	display: block;
+}
+.page .opciones > .radio, .page .opciones > .check,
+.page .opciones > .escala {
+	float: left;
+	position: relative;
+}
+.page .multiRadio label {
+	display: block;
+	position: relative;
+}
+.radio input, .check input, .multiRadio input {
+	display: none;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+.radio .chulo, .check .chulo, label .chulo {
+	background: url("../img/chulo-borde.png") center/contain no-repeat;
+	height: 2.75vh;
+	position: absolute;
+	right: 3vh;
+	top: -1vh;
+	width: 2.833vh;
+}
+/*label .chulo {
+	position: static;
+}*/
+.radio .chulo img,
+.check .chulo img {
+	display: none;
+}
+/*input[type="checkbox"] + .impostor {
+	position: static; 
+}
+input:checked + .impostor {
+	position: relative; 
+}
+input[type="checkbox"]~.chulo {
+	
+}*/
+input:checked~.chulo {
+	/*display: block;*/
+	background: url("../img/chulo.png") center/contain no-repeat, url("../img/chulo-borde.png") center/contain no-repeat;
+}
+.match {
+	position: relative;
+}
+
+/*=======================
+=====FONDOS COMUNES====
+========================*/
+.marco-azul:before,
+.marco-lila:before,
+.marco-amarillo:before,
+.nubes-izqder:before,
+.nubes-supinf:before
+ {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: no-repeat center;
+	background-size: 100% 100%;
+}
+.marco-azul:before {
+	background-image: url(../img/fondos/marco-azul.png);
+}
+.marco-lila:before {
+	background-image: url(../img/fondos/marco-lila.png);
+}
+.marco-amarillo:before {
+	background-image: url(../img/fondos/marco-amarillo.png);
+}
+.nubes-izqder:before {
+	background: url(../img/fondos/nube-izquierda.png) no-repeat left top, url(../img/fondos/nube-derecha.png) no-repeat right bottom;
+	background-size: initial;
+}
+.nubes-supinf:before {
+	background: url(../img/fondos/nube-superior.png) no-repeat right top, url(../img/fondos/nube-inferior.png) no-repeat left bottom;
+	background-size: initial;
+}
+.fPatron {
+	background-size: 50%;
+	background-repeat: repeat;
+	background-position: center top;
+}
+
+
+
+/*=======================
+========PANTALLAS========
+========================*/
+
+/*Pantallas tipo rect*/
+.rect {
+	background-size: 100% 100%;
+	max-width: 900px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 10rem;
+}
+.rect .consejo {
+	position:relative;
+	width: 100%;
+	max-width: 300px;
+	margin: 3.2rem auto 0;
+}
+.rect .consejo:before,
+.rect .consejo:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 90px;
+	height: 100%;
+	background: url(../img/elem/rect-consejo-izq.png) no-repeat center;
+	background-size: contain;
+	top: 0;
+	left: -90px;
+}
+.rect .consejo:after { 
+	background-image: url(../img/elem/rect-consejo-der.png);
+	right: -90px;
+	left: initial;
+}
+/*Pantallas tipo globo*/
+.globo {
+	background-image: url(../img/fondos/globo-rojo.png);
+	background-size: 100% 100%;
+	padding-top: 5%;/*Areglar en responsive*/
+	width: 90%;
+	max-width: 800px;
+	height: 87vh;
+	max-height: 620px;
+	margin: 0 15px 0 auto;
+	color: #fff2d8;
+	position: relative;
+}
+.globo:before,
+.globo:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+	width: 250px;
+	height: 250px;
+	background: url(../img/elem/corazon-llanto.png) no-repeat center;
+	background-size: contain;
+}
+.globo p {
+	max-width: 610px;
+	margin: 2.2rem auto;
+}
+.globo p.reflex {
+	max-width: 320px;
+}
+/*Pantallas tipo bola*/
+.bola {
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position:  center;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 10rem;
+}
+.bola .consejo:before,
+.bola .consejo:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	background: url(../img/elem/bola-linea-vino-L.png) no-repeat center;
+	top: 0;
+	left: 0;
+}
+.bola .consejo:after { 
+	background-image: url(../img/elem/bola-linea-vino-S.png);
+	bottom: 0;
+	top: initial;
+	max-width: 250px;
+	left: 50%;
+	margin-left: -125px;
+
+}
+
+
+
+
+/**++++++++++++++++
++++  Pagina 1  +++ 
++++++++++++++++++**/
+.page.p1 {
+	background: #FCF573;
+}
+h1 {
+	font-size: 2.5rem;
+	margin: 0;
+	position: relative;
+}
+h1 img {
+	height: 37vh;
+	margin: 0 -45% 8vh;
+	/*position: absolute;*/
+	/*width: 190%;*/
+	width: auto;
+}
+h1 i {
+	display: none;
+}
+h1 span {
+	color: #fff;
+	display: block;
+	font-family: 'Caveat', cursive;
+	position: absolute;
+	top: 8.7rem;
+	width: 100%;
+}
+/*Juan*/
+.page.p1 {
+	background-image: url(../img/fondos/manchas-azul.png);
+}
+.p1 .invita a {
+	font-size: 7rem;
+	color: #b80d80;
+	-webkit-transition: background-color 500ms ease, color 500ms ease;
+	-moz-transition: background-color 500ms ease, color 500ms ease;
+	transition: background-color 500ms ease, color 500ms ease;
+}
+.p1 .invita a:hover {
+	font-size: 7rem;
+	color: #37e7db;
+	text-decoration: none;
+}
+/*Juan*/
+@media screen and (orientation:landscape) and (max-height: 640px) {
+	h1 span {
+		font-size: 0.85em;
+		top: 4.557rem;
+	}
+}
+.p1 header p,
+.p1 .invita {
+	/*font-size: 1.3rem;Juan*/
+	/*font-weight: 700;Juan*/
+	margin: auto;
+	text-align: center;
+	width: 50%;
+}
+.invita a {
+    display: block;
+	font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    margin: 3.583vh -2rem 0;
+}
+/****************************************************************
+*************** Estilos Provisionales desktop ******************
+*****************************************************************/
+
+/**++++++++++++++++
++++  Pagina 2  +++ 
++++++++++++++++++**/
+.page.p2 h2 {
+	/*margin-bottom: 13.5vh;*/
+	margin-bottom: 7.5vh;
+}
+.page.p2 .opciones .radio {
+	width: 50%;
+}
+.page.p2 .radio img {
+	height: 30.667vh;
+	width: auto;
+}
+label > h3 {
+	font-size: 2.1rem;
+}
+/*Juan*/
+.page.p2 h2 {
+	margin-bottom:5.5vh;
+}
+.p2 {
+background-image: url(../img/fondos/manchas-azul.png);
+}
+.p2 input:checked + .impostor h3 span {
+	border-radius: 8px;
+	padding: 3%;
+	-webkit-transition: background-color 500ms ease, color 500ms ease;
+	-moz-transition: background-color 500ms ease, color 500ms ease;
+	transition: background-color 500ms ease, color 500ms ease;
+}
+.p2 input:checked + .impostor h3 span {
+	background-color: #4c54fc;
+	color: #fcf474;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 3  +++ 
++++++++++++++++++**/
+/*Juan*/
+.page.p3 .match {
+	width: 80%;
+	margin: 0 auto;
+}
+.page.p3  img {
+	height: 50.25vh;
+	width: auto;
+}
+.page.p3 label {
+	position: absolute;
+	opacity: 1;
+}
+.page.p3 label[for=pais1] {
+	background: none;
+	height: 50.25vh;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+.page.p3 h3 {
+	margin-bottom: 8vh;
+}
+.page.p3 {
+	background-image: url(../img/fondos/manchas-azul.png)!important;
+}
+.page.p3 label[for=pais] {
+	border-radius: 8em;
+	height: 7.5vh; 
+	left: calc(50% - 24.8vh);
+	top: 19.833vh;
+	width: 4.25vh;
+	z-index: 25;
+	border: 2px solid transparent;
+}
+.page.p3 label span{
+	position: absolute;
+	border: .4rem solid transparent;
+	border-radius: 2vh;
+	padding: .5rem 1.5rem;
+	transition: all 500ms ease;
+}
+.page.p3 label[for=pais] span{
+	left:-15rem;
+	width: 15rem;
+	top: 2.2vh;
+}
+.page.p3 label[for=pais1] span {
+	top: 40vh;
+	width: 24rem;
+	left: calc(50% - 10rem);
+}
+.page.p3 label[for=pais1]:hover span,
+.page.p3 label[for=pais]:hover span {
+	border-color: #4c54fc;
+}
+.page.p3 label.lActivo span {
+	background-color: #4c54fc;
+	color:#fff2d8;
+	border-color: #4c54fc;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 3_1  +++ 
++++++++++++++++++**/
+.page.p3_1 .match {
+	width: 80%;
+	margin: 0 auto;
+}
+.page.p3_1 label {
+	position: absolute;
+	opacity: .3;
+	text-align: left;
+	width: initial;
+	height: initial;
+	min-width: initial;
+	min-height: initial
+}
+.page.p3-1 img {
+	height: 75vh;
+	width: auto;
+}
+.page.p3-1 label span {
+	position: absolute;
+}
+.page.p3_1 label .btn-col {
+	display: block;
+	width: 2vh;
+	height: 2vh;
+	background: #fff2d8;
+	border-radius: 100%;
+	border: 3px #5c4de6 solid;
+	left: 0;
+	
+}
+.page.p3_1 label .tit-dpto {
+	position: absolute;
+	display: none;
+	background-color: rgba(255,255,255,.9);
+	left: 2.5vh;
+	padding: .1em .4em;
+	
+}
+.page.p3_1 label:hover .tit-dpto,
+.page.p3_1 label.lActivo .tit-dpto {
+	display: block;
+}
+.page.p3-1 label.lActivo span.btn-col {
+	background-color: #37e7db;
+	border-color: #4c54fc;
+	border-width: 5px;
+	
+}
+.page.p3-1 label.lActivo span.tit-dpto {
+	background-color: #fcf474;
+
+}
+/*Islas*/
+.page.p3_1 .colInsular label .btn-col {
+	display: block;
+	width: 2vh;
+	height: 2vh;
+	background: #fff2d8;
+	border-radius: 100%;
+	border: 3px #5c4de6 solid;
+	left: calc(50% - 1vh);
+}
+.page.p3_1 .colInsular label .tit-dpto {
+	top: 2.5vh;
+}
+/*posiciones*/
+.page.p3-1 label.lActivo {
+	opacity: 1;
+}
+.page.p3-1 label[for=adz] {
+	top: 1.2vh;
+	left: calc(50% - 23vh);
+	left: calc(50% - 23vh);
+	width: 6vh;
+	height: 10vh;
+}
+.page.p3-1 label[for=prov] {
+	top: 1.2vh;
+	left: calc(50% - 16.5vh);
+	width: 6vh;
+	height: 6vh;
+}
+.page.p3-1 label[for=colombia] {
+	top: 0vh;
+	left: calc(50% - 30vh);
+	width: 60vh;
+	height: 75vh;
+}
+.page.p3-1 label[for=colombia] span {
+	top: 30vh;
+	width: 8vh;
+	height: 8vh;
+}
+/*Dptos Colombia*/
+.page.p3-1 .colContinental label[for=amaz] {
+	top: 61vh;
+	left: calc(50% + 9vh);
+	right: 0vh;
+}
+.page.p3-1 .colContinental label[for=nari] {
+	top: 47.8vh;
+	left: calc(50% - 20vh);
+}
+.page.p3-1 .colContinental label[for=putu] {
+	top: 53vh;
+	left: calc(50% - 9vh);
+}
+.page.p3-1 .colContinental label[for=caqu] {
+	top: 50.5vh;
+	left: calc(50% - 2vh);
+}
+.page.p3-1 .colContinental label[for=guav] {
+	top: 48vh;
+	left: calc(50% + 4.5vh);
+}
+.page.p3-1 .colContinental label[for=vaup] {
+	top: 52vh;
+	left: calc(50% + 12.5vh);
+}
+.page.p3-1 .colContinental label[for=cauc] {
+	top: 44.2vh;
+	left: calc(50% - 15vh);
+}
+.page.p3-1 .colContinental label[for=huil] {
+	top: 43vh;
+	left: calc(50% - 8.7vh);
+}
+.page.p3-1 .colContinental label[for=toli] {
+	top: 39vh;
+	left: calc(50% - 8.7vh);
+}
+.page.p3-1 .colContinental label[for=meta] {
+	top: 40vh;
+	left: calc(50% - .5vh);
+}
+.page.p3-1 .colContinental label[for=guai] {
+	top: 44vh;
+	left: calc(50% + 16.2vh);
+}
+.page.p3-1 .colContinental label[for=vich] {
+	top: 36vh;
+	left: calc(50% + 16.2vh);
+}
+.page.p3-1 .colContinental label[for=casa] {
+	top: 30vh;
+	left: calc(50% + 9.5vh);
+}
+.page.p3-1 .colContinental label[for=arau] {
+	top: 26.5vh;
+	left: calc(50% + 11.5vh);
+}
+.page.p3-1 .colContinental label[for=boya] {
+	top: 32.5vh;
+	left: calc(50% + 1.5vh);
+}
+.page.p3-1 .colContinental label[for=vall] {
+	top: 39.2vh;
+	left: calc(50% - 15vh);
+}
+.page.p3-1 .colContinental label[for=bogo] {
+	top: 37vh;
+	left: calc(50% - 3vh);
+}
+.page.p3-1 .colContinental label[for=cund] {
+	top: 32.5vh;
+	left: calc(50% - 3vh);
+}
+.page.p3-1 .colContinental label[for=quin] {
+	top: 35.5vh;
+	left: calc(50% - 9.5vh);
+}
+.page.p3-1 .colContinental label[for=risa] {
+	top: 32vh;
+	left: calc(50% - 10.8vh);
+}
+.page.p3-1 .colContinental label[for=cald] {
+	top: 32vh;
+	left: calc(50% - 7vh);
+}
+.page.p3-1 .colContinental label[for=choc] {
+	top: 29vh;
+	left: calc(50% - 13.8vh);
+}
+.page.p3-1 .colContinental label[for=anti] {
+	top: 26vh;
+	left: calc(50% - 10.8vh);
+}
+.page.p3-1 .colContinental label[for=sant] {
+	top: 23.3vh;
+	left: calc(50% + 0vh);
+}
+.page.p3-1 .colContinental label[for=cord] {
+	top: 20vh;
+	left: calc(50% - 10vh);
+}
+.page.p3-1 .colContinental label[for=nsan] {
+	top: 20vh;
+	left: calc(50% + 4vh);
+}
+.page.p3-1 .colContinental label[for=sucr] {
+	top: 17.5vh;
+	left: calc(50% - 5.3vh);
+}
+.page.p3-1 .colContinental label[for=boli] {
+	top: 13vh;
+	left: calc(50% - 5.3vh);
+}
+.page.p3-1 .colContinental label[for=atla] {
+	top: 10.2vh;
+	left: calc(50% - 5.3vh);
+}
+.page.p3-1 .colContinental label[for=magd] {
+	top: 8.3vh;
+	left: calc(50% - 2.8vh);
+}
+.page.p3-1 .colContinental label[for=guaj] {
+	top: 5.3vh;
+	left: calc(50% + 5.8vh);
+}
+.page.p3-1 .colContinental label[for=cesa] {
+	top: 11.8vh;
+	left: calc(50% + 2vh);
+}
+/*Juan*/
+/**+++++++++++++++++++
++++  Pagina 3-1-1  +++ 
++++++++++++++++++**/
+.page.p3-1-1 .match {
+	width: 80%;
+	margin: 0 auto;
+}
+.page.p3-1-1  img {
+	/*height: 59.583vh;*/
+	/*width: auto;*/
+}
+.page.p3-1-1 label {
+	position: absolute;
+}
+/*.page.p3-1-1 label[for=staCat], .page.p3-1-1 label[for=oldTown] {
+	border-radius: 60%;
+    height: 12.667vh;
+    left: calc(50% - 19.55vh);
+    top: 11.333vh;
+    width: 15.75vh;
+    z-index: 25;
+}
+.page.p3-1-1 label[for=oldTown] {
+	height: 22.667vh;
+    left: calc(50% - 13.85vh);
+    top: 35.833vh;
+    transform: rotate(-15deg);
+    width: 16.25vh;
+}
+.page.p3-1-1 label[for=staCat]:hover, .page.p3-1-1 label[for=oldTown]:hover {
+	background: rgba(92,77,230,0.4);
+}*/
+/*Juan*/
+.litu-mapa {
+ background-image: url(../img/fondos/manchas-azul.png);
+}
+.litu-mapa h3 {
+	margin-bottom: 6vh;
+}
+.page.p3-1-1  img {
+	height: 80vh;
+	width: auto;
+}
+.litu-mapa label {
+	position: absolute;
+	/*background-color: rgba(0,255,255,0.5);*/
+	min-width: 5vh;
+	min-height: 5vh;
+	border-radius: 25%;
+	z-index: 25;
+	opacity: .5;
+	transition: all 500ms ease;
+}
+.litu-mapa label:hover {
+	opacity: 1;
+}
+.page.p3-1-1 label[for=staCat] {
+	top: 9.333vh;
+	left: calc(50% - 13.55vh);
+	width: 10vh;
+	height: 10vh;
+	
+}
+.page.p3-1-1 label span{
+	position: absolute;
+	width: 3vh;
+	height: 3vh;
+	background: #fff2d8;
+	border-radius: 100%;
+	border: 5px #37e7db solid;
+	color: transparent;
+	font-size: 8px;
+}
+/*posiciones*/
+.page.p3-1-1 label[for=balley] {
+	top: 30vh;
+	left: calc(50% + 1vh);
+	width: 13vh;
+	height: 17vh;
+}
+.page.p3-1-1 label[for=balley] span {
+	top: 5vh;
+	left: 2vh;
+}
+.page.p3-1-1 label[for=bottomHouse] {
+	top: 48vh;
+	left: calc(50% - 12vh);
+	width: 13vh;
+	height: 10vh;
+}
+.page.p3-1-1 label[for=bottomHouse] span {
+	top: 2.9vh;
+	right: 2vh;
+}
+.page.p3-1-1 label[for=camp] {
+	height: 6vh;
+    left: calc(50% - 20vh);
+    top: 29.833vh;
+    transform: rotate(-12deg);
+    width: 8.25vh;
+}
+.page.p3-1-1 label[for=freshBay] {
+	top: 46vh;
+	left: calc(50% - 26vh);
+	width: 13vh;
+	height: 10vh;
+}
+.page.p3-1-1 label[for=freshBay] span {
+	bottom: 1.4vh;
+}
+.page.p3-1-1 label[for=lazyHill] {
+	top: 37vh;
+	left: calc(50% - 25vh);
+	width: 13vh;
+	height: 9vh;
+}
+.page.p3-1-1 label[for=lazyHill] span{
+	bottom: 1vh;
+	right: 2vh;
+}
+.page.p3-1-1 label[for=mountain] {
+	top: 17vh;
+	left: calc(50% + .5vh);
+	width: 10vh;
+	height: 12vh;
+}
+.page.p3-1-1 label[for=mountain] span {
+	right: 1.5vh;
+	top: 5.5vh;
+}
+.page.p3-1-1 label[for=oldTown] {
+	height: 10vh;
+    left: calc(50% - 10.85vh);
+    top: 29.833vh;
+    transform: rotate(-12deg);
+    width: 9.25vh;
+}
+.page.p3-1-1 label[for=oldTown] span {
+	bottom: .8vh;
+	
+}
+.page.p3-1-1 label[for=rockyPoint] {
+	top: 48vh;
+	left: calc(50% + 1.1vh);
+	width: 9vh;
+	height: 11vh;
+}
+.page.p3-1-1 label[for=rockyPoint] span {
+	top: 2.8vh;
+}
+.page.p3-1-1 label[for=smoothWater] {
+	top: 59vh;
+	left: calc(50% - 4.1vh);
+	width: 9vh;
+	height: 6vh;
+}
+.page.p3-1-1 label[for=smoothWater] span{
+	bottom: 2vh;
+	right:0;
+}
+.page.p3-1-1 label[for=southwestBay] {
+	top: 57vh;
+	left: calc(50% - 26vh);
+	width: 13vh;
+	height: 10vh;
+}
+.page.p3-1-1 label[for=southwestBay] span {
+	bottom: .5vh;
+	right: 5vh;
+}
+.page.p3-1-1 label[for=staCat] {
+	top: 9.333vh;
+	left: calc(50% - 13.55vh);
+	width: 10vh;
+	height: 10vh;
+}
+.page.p3-1-1 label[for=town] {
+	top: 17vh;
+	left: calc(50% - 4.5vh);
+	width: 2vh;
+	height: 12vh;
+}
+.page.p3-1-1 label[for=town] span {
+	bottom: 4.5vh;
+	right: 1vh;
+}
+.page.p3-1-1 label.lActivo {
+	opacity: 1;
+	
+}
+.page.p3-1-1 label.lActivo span {
+	background-color: #fcf474;
+	border: 8px #4c54fc solid;
+}
+/*Juan*/
+/**+++++++++++++++++++
++++  Pagina 3-1-2  +++ 
++++++++++++++++++**/
+.page.p3-1-2 .match {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*.page.p3-1-2 label[for=centroAdz], .page.p3-1-2 label[for=elCove] {
+	border-radius: 60%;
+    height: 12.667vh;
+    left: calc(50% - 19.55vh);
+    top: 11.333vh;
+    width: 15.75vh;
+    z-index: 25;
+}
+.page.p3-1-2 label[for=elCove] {
+	height: 22.667vh;
+    left: calc(50% - 13.85vh);
+    top: 35.833vh;
+    transform: rotate(-15deg);
+    width: 16.25vh;
+}
+.page.p3-1-2 label[for=centroAdz]:hover, .page.p3-1-2 label[for=elCove]:hover {
+	background: rgba(92,77,230,0.4);
+}
+.page.p3-1-2 label[for=colombia] {
+	background: none;
+	height: 100%;
+	left: 21.5%;
+	top: 0;
+	width: 57%;
+	z-index: 10;
+}*/
+/*Juan*/
+.page.p3-1-2 {
+ background-image: url(../img/fondos/manchas-azul.png);
+}
+.page.p3-1-2 h3 {
+	margin-bottom: 6vh;
+}
+.page.p3-1-2  img {
+	height: 80vh;
+	width: auto;
+}
+.page.p3-1-2 label {
+	position: absolute;
+	/*background-color: rgba(0,0,255,0.5);*/
+	min-width: 5vh;
+	min-height: 5vh;
+	border-radius: 25%;
+	z-index: 25;
+	opacity: 0.6;
+	transition: opacity 500ms ease;
+}
+.page.p3-1-2 label:hover {
+	opacity: 1;
+}
+
+.page.p3-1-2 label span{
+	position: absolute;
+	width: 3vh;
+	height: 3vh;
+	background: #fff2d8;
+	border-radius: 100%;
+	border: 5px #b80d80 solid;
+	color: transparent;
+	font-size: 8px;
+}
+/*Posiciones*/
+.page.p3-1-2 label[for=cuevaMorgan] {
+	top: 21vh;
+	left: calc(50% - 16.55vh);
+	width: 14vh;
+	height: 20.5vh;
+}
+.page.p3-1-2 label[for=cuevaMorgan] span {
+	top: 10vh;
+}
+.page.p3-1-2 label[for=elCove] {
+	top: 43vh;
+	left: calc(50% - 12.55vh);
+	width: 10vh;
+	height: 15vh;
+}
+.page.p3-1-2 label[for=elCove] {
+	top: 42vh;
+	left: calc(50% - 12.55vh);
+	width: 10vh;
+	height: 16vh;
+}
+.page.p3-1-2 label[for=elCove] span {
+	top: 6vh;
+}
+.page.p3-1-2 label[for=laPiscinita] {
+	top: 58vh;
+	left: calc(50% - 17.5vh);
+	width: 7vh;
+	height: 12vh;
+}
+.page.p3-1-2 label[for=laPiscinita] span {
+	top: 2vh;
+}
+.page.p3-1-2 label[for=puntaSur] {
+	top: 60vh;
+	left: calc(50% - 10vh);
+	width: 9vh;
+	height: 18vh;
+}
+.page.p3-1-2 label[for=puntaSur] span {
+	bottom: 6vh;
+}
+.page.p3-1-2 label[for=soundBay] {
+	top: 38vh;
+	left: calc(50% - 1.8vh);
+	width: 13vh;
+	height: 22vh;
+}
+.page.p3-1-2 label[for=soundBay] span {
+	top: 10vh;
+	left: 2vh;
+}
+.page.p3-1-2 label[for=bahiaBaja] {
+	top: 21vh;
+	left: calc(50% - 1.8vh);
+	width: 15vh;
+	height: 16.5vh;
+}
+.page.p3-1-2 label[for=puntaNorte] {
+	top: 1vh;
+	left: calc(50% - 7.8vh);
+	width: 15vh;
+	height: 19.5vh;
+}
+.page.p3-1-2 label[for=puntaNorte] span {
+	top: 6vh;
+	right: 3vh
+}
+.page.p3-1-2 label[for=sanBay] {
+	top: 1vh;
+	left: calc(50% + 7.3vh);
+	width: 14vh;
+	height: 20.3vh;
+}
+.page.p3-1-2 label[for=sanBay] span {
+	top: 13vh;
+	right: 6vh;	
+}
+.page.p3-1-2 label.lActivo {
+	opacity: 1;
+	
+}
+.page.p3-1-2 label.lActivo span {
+	background-color: #37e7db;
+	border-color: #4c54fc;
+	border-width: 8px;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 4  +++ 
++++++++++++++++++**/
+.page.p4 h3 {
+	margin-bottom: 13.5vh;
+}
+.page.p4 .opciones {
+	width: 65%;
+}
+.page.p4 .opciones .radio {
+	width: 50%;
+}
+.page.p4 .radio img {
+	height: 32.083vh;
+	width: auto;
+}
+label > h4 {
+	font-size: 2.1rem;
+	margin-top: 6.167vh;
+}
+/*Juan*/
+.p4 input:checked + .impostor h4 span {
+	border-radius: 8px;
+	padding: 3% 8%;
+	transition: background-color 500ms ease, color 500ms ease;
+}
+.p4 input:checked + .impostor h4 span {
+	background-color: #4c54fc;
+	color: #fcf474;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 5  +++ 
++++++++++++++++++**/
+nav.sidebar .der {
+	right: 24%;
+}
+.p5 .ui > h3 {
+	margin-bottom: 15vh;
+}
+.p5 .mayor {
+	float: left;
+	height: 100%;
+	width: 78.646%;
+}
+.p5 .menor {
+	color: #fcf573;
+	background-color: #4c54fc;
+	float: left;
+	height: 100%;
+	width: 21.354%;
+}
+.p5 .menor h4 {
+    margin: 0 auto 1em;
+    padding-bottom: 0.5em;
+	position: relative;
+    text-align: left;
+    width: 80%;
+}
+.p5 .birrete {
+	display: none;
+    height: 8.167vh;
+    left: 46%;
+    position: absolute;
+    top: calc(50% - 26vh);
+    z-index: 40;
+}
+.p5 .birrete img {
+	height: 100%;
+	width: auto;
+}
+.p5 .birrete.prim {
+	background: transparent url("../img/elem/birrete-prim.png") center/100% auto no-repeat;
+	display: block;
+}
+.p5 .birrete.secu {
+	background: transparent url("../img/elem/birrete-secun.png") center/100% auto no-repeat;
+	display: block;
+	/*top: calc(50% - 27.2vh);*/
+}
+.p5 .birrete.tecn {
+	background: transparent url("../img/elem/birrete-tec.png") center/100% auto no-repeat;
+	display: block;
+	/*top: calc(50% - 27.5vh);*/
+}
+.p5 .birrete.univ {
+	background: transparent url("../img/elem/birrete-uni.png") center/100% auto no-repeat;
+	display: block;
+	/*top: calc(50% - 27.8vh);*/
+}
+.p5 .birrete.posg {
+	background: transparent url("../img/elem/birrete-posg.png") center/100% auto no-repeat;
+	display: block;
+	/*top: calc(50% - 28vh);*/
+}
+.p5 .birrete.no {
+	display: none;
+}
+.p5 .leng {
+    left: 49%;
+	position: absolute;
+    top: calc(50% - 26vh);
+    z-index: 66;
+}
+.p5 .leng li {
+	display: none;
+	height: 21.083vh;
+	list-style: none;
+	position: absolute;
+	width: 17.583vh;
+}
+.p5 .leng li span {
+	display: none;
+}
+.p5 .leng .kr {
+	background: transparent url("../img/elem/leng-kriol.png") center/100% auto no-repeat;
+}
+.p5 .leng .es {
+	background: transparent url("../img/elem/leng-esp.png") center/100% auto no-repeat;
+}
+.p5 .leng .en {
+	background: transparent url("../img/elem/leng-eng.png") center/100% auto no-repeat;
+}
+.p5 .leng .ot {
+	background: transparent url("../img/elem/leng-otro.png") center/100% auto no-repeat;
+}
+.p5 .leng.kriol .kr {
+	display: block;
+}
+.p5 .leng.espanol .es {
+	display: block;
+}
+.p5 .leng.english .en {
+	display: block;
+}
+.p5 .leng.otroIdi .ot {
+	display: block;
+}
+.p5 .corpo {
+	/*border: 1px solid #000;*/
+    height: 33.667vh;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transition: all 500ms ease-out;
+    width: 21.333vh;
+    z-index: 0;
+}
+.p5 .corpo::after,
+.p5 .corpo::before {
+	background: rgba(255,241,216,1);
+	background: linear-gradient(to right, rgba(255,241,216,1) 0%, rgba(255,241,216,1) 24%, rgba(255,241,216,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff1d8', endColorstr='#fff1d8', GradientType=1 );
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0rem;
+	width: 33%;
+	z-index: 1;
+}
+.p5 .corpo::after {
+	right: 67%;
+}
+.p5 .corpo::before {
+	left: 68%;
+    transform: rotate(180deg);
+}
+.p5 .corpo img {
+	height: 72.167vh;
+	left: 0;
+	position: absolute;
+	top: 5%;
+	transition: all 500ms ease-out;
+}
+.p5 .corpo.fem img {
+	top: 5%;
+}
+.p5 .corpo.hom img {
+	top: -117.5%;
+}
+.p5 .corpo.peq img {
+	left: -323%;
+}
+.p5 .corpo.jov img {
+	left: -210%;
+}
+.p5 .corpo.adu img {
+	left: -91%;
+}
+.p5 .corpo.abu img {
+	left: 28%;
+}
+.p5 .mayor .ui > p {
+    color: #b70d80;
+	font-size: 7.75rem;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: right;
+    width: 10%;
+}
+.p5 .mayor .ui > p::after,
+.p5 .mayor .ui > p::before {
+	background-color: #00f6e1;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0rem;
+	width: 66%;
+	z-index: 0;
+}
+.p5 .mayor .ui > p::before {
+	box-shadow: 0 0.8rem 0.5511rem 0.0511rem rgba(0,0,0,0.39); 
+	left: -19%;
+}
+.p5 .mayor .ui > p::after {
+	box-shadow: 0 -0.8rem 0.5511rem 0.0511rem rgba(0,0,0,0.39);
+	right: -22%;
+}
+.p5 .mayor .ui > p > span {
+	display: block;
+	position: relative;
+	z-index: 99;
+}
+.p5 .mayor .ui > p > span.dob::first-letter {
+	letter-spacing: 0.6em;
+}
+.p5 .menor h4::after {
+	border-bottom: 1px solid #fcf573;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+.p5 .menor h4:first-child {
+	margin-top: 4em;
+}
+.p5 .opciones:not(.checkGrup) {
+	margin: 2em auto 6em;
+}
+.p5 .menor .radio {
+	color: #4c54fc;
+	width: 47.272%;
+}
+.p5 .menor .radio:first-child,
+.p5 .menor .radio:nth-child(3),
+.p5 .menor .radio:nth-child(5) {
+	margin-right: 5.4%;
+}
+.p5 .menor .radio .impostor {
+    padding: 7% 4.9%;
+}
+.p5 .menor .radio input:checked ~ .impostor {
+	background: transparent url("../img/elem/btn-idio.png") center/100% 100% no-repeat;
+}
+/*.p5 .menor .radio input:checked ~ label {
+	background: none;
+}*/
+.p5 .menor .radio label {
+	background-color: #fcf474;
+	display: block;
+    min-height: 3.5rem;
+    width: 99.1%;
+}
+.p5 .menor .radio p,
+.p5 .menor .check p {
+	font-size: 1.875rem;
+    margin: 0;
+    padding: 0.7em 0;
+    width: 100%;
+}
+.p5 .menor .radio label[for="tecnico"] p {
+	padding: 0.1em 0;
+}
+.p5 .menor .check {
+	color: #4c54fc;
+	margin-bottom: 0.5em;
+	width: 45.272%;
+}
+.p5 .menor .check:first-child,
+.p5 .menor .check:nth-child(3) {
+	margin-right: 7.4%;
+}
+.p5 .menor .check .impostor {
+	background: transparent url("../img/elem/btn-idio.png") center/100% 100% no-repeat;
+}
+.p5 .menor .check .chulo, .p5 .menor .radio .chulo {
+	background: url("../img/chulo-borde-fondo-azul.png") center/contain no-repeat;
+	right: -9%;
+}
+.p5 .menor .radio .chulo {
+	right: -6.5%;
+	top: -0.5vh;
+}
+.p5 .menor input:checked~.chulo {
+	background: url("../img/chulo-ama.png") center/contain no-repeat, url("../img/chulo-borde-fondo-azul.png") center/contain no-repeat;
+}
+.p5 .menor .radio input:checked~.chulo {
+	right: -9%;
+	top: -1vh;
+}
+
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 81.7%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+/***++++    THUMB     ++++****/
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /*border: 1px solid #000000;*/
+  height: 6.3vh;
+  width: 6.3vh;
+  /*border-radius: 3px;*/
+  /*background: #ffffff;*/
+  background: transparent url("../img/elem/slider-edad-thumb.png") center/100% no-repeat;
+  cursor: pointer;
+  /*margin-top: -14px;  You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  margin-top: 2.65vh;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;*/
+  height: 6.3vh;
+  width: 6.3vh;
+  /*border-radius: 3px;*/
+  /*background: #ffffff;*/
+  background: transparent url("../img/elem/slider-edad-thumb.png") center/100% no-repeat;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;*/
+  height: 6.3vh;
+  width: 6.3vh;
+  /*border-radius: 3px;*/
+  /*background: #ffffff;*/
+  background: transparent url("../img/elem/slider-edad-thumb.png") center/100% no-repeat;
+  cursor: pointer;
+}
+/*+++++      TRACK        ++++++****/
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  /*height: 8.4px;*/
+  height: 12.4vh;
+  cursor: pointer;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  /*background: #3071a9;*/
+  background: transparent url("../img/elem/slider-edad.png") center/100% no-repeat;
+  /*border-radius: 1.3px;*/
+  /*border: 0.2px solid #010101;*/
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  /*background: #367ebd;*/
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+   /*height: 8.4px;*/
+  height: 12.4vh;
+  cursor: pointer;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  /*background: #3071a9;*/
+  background: transparent url("../img/elem/slider-edad.png") center/100% no-repeat;
+  /*border-radius: 1.3px;*/
+  /*border: 0.2px solid #010101;*/
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  /*height: 8.4px;*/
+  height: 12.4vh;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  /*background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  /*background: #3071a9;*/
+}
+input[type=range]::-ms-fill-upper {
+  /*background: #3071a9;*/
+  background: transparent url("../img/elem/slider-edad.png") center/100% no-repeat;
+  /*border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+}
+input[type=range]:focus::-ms-fill-upper {
+  /*background: #367ebd;*/
+}
+
+
+
+
+/**++++++++++++++++
++++  Pagina 6  +++ 
++++++++++++++++++**/
+.page.p6 h3 {
+	margin-bottom: 9.167vh;
+}
+.page.p6 span {
+	display: block;
+	margin-top: 3.833vh;
+}
+.page.p6 .opciones {
+    height: 35vh;
+    margin-bottom: 24vh;
+	width: 68%;
+}
+.page.p6 .opciones .radio {
+	/*overflow: hidden;*/
+	width: 20%;
+}
+.page.p6 .radio img {
+	height: 21.167vh;
+	width: auto;
+}
+.page.p6 .impostor {
+	/*background: #fffaef url("../img/marco-sel-etnia.png") center/contain no-repeat;*/
+	background: url("../img/marco-sel-etnia.png") center/contain no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 18.25vh;
+}
+.page.p6 .radio:nth-child(1) .impostor,
+.page.p6 .radio:nth-child(3) .impostor,
+.page.p6 .radio:nth-child(5) .impostor {
+	margin-top: 12vh;
+}
+.page.p6 .radio .chulo {
+	/*right: 3.5vh;Juan*/
+	right: calc(50% - 18.25vh/2 - 2.833vh/2);
+}
+.page.p6 .radio:nth-child(1) .chulo,
+.page.p6 .radio:nth-child(3) .chulo,
+.page.p6 .radio:nth-child(5) .chulo {
+	top: 11vh;
+}
+
+.p6 label > h4 {
+	display: none;
+}
+.page.p6 label[for=raizal] img {
+	margin-left: 0.7vh;
+}
+.page.p6 label[for=pana] img {
+	margin-left: -15.25vh;
+}
+.page.p6 label[for=miti] img {
+	margin-left: -30.9vh;
+}
+.page.p6 label[for=desArab] img {
+	margin-left: -47.1vh;
+}
+.page.p6 label[for=ninguno] img {
+	margin-left: -63vh;
+}
+
+/**++++++++++++++++
++++  Pagina 7  +++ 
++++++++++++++++++**/
+
+.page.p7 .opciones {
+    height: 35vh;
+    margin-bottom: 24vh;
+	width: 68%;
+}
+.page.p7 .opciones .check {
+	/*overflow: hidden;*/
+	width: 16.666%;
+	position: relative;
+}
+.page.p7 .opciones .check.nivel0 {
+	bottom: -23vh;
+	left: calc(50% - 8.333%);
+	position: absolute;
+	/*width: */
+}
+.page.p7 .impostor {
+	background: url("../img/marco-sel-situa.png") center top/contain no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 8.3vh;
+	position: relative;
+	width: 14.417vh;
+}
+.page.p7 .impostor:hover {
+	/*padding-bottom: 10vh;*/
+}
+.page.p7 .nivel0 .impostor {
+	background: url("../img/marco-sel-situa-ninguna.png") center top/contain no-repeat;
+	/*padding-bottom: 5vh;
+	position: relative;
+	width: 14.417vh;*/
+}
+.page.p7 .nivel0 .impostor {
+    height: 1.5em;
+	padding-bottom: 0;
+}
+.p7 .nivel7 {
+	margin-left: 8.33%;
+}
+.page.p7 .check img {
+	height: 16.667vh;
+	width: auto;
+}
+.page.p7 label[for=choques] img {
+	margin-left: 0.15vh;
+}
+.page.p7 label[for=cantaleta] img {
+	margin-left: -13.85vh;
+}
+.page.p7 label[for=controladera] img {
+	margin-left: -28.1vh;
+}
+.page.p7 label[for=show] img {
+	margin-left: -42.1vh;
+}
+.page.p7 label[for=revisadera] img {
+	margin-left: -56vh;
+}
+.page.p7 label[for=vigiladera] img {
+	margin-left: -69.25vh;
+}
+.page.p7 label[for=prohibicion] img {
+	margin-left: -83.9vh;
+}
+.page.p7 label[for=peleaGolpes] img {
+	margin-left: -97.1vh;
+}
+.page.p7 label[for=amenaza] img {
+	margin-left: -111.5vh;
+}
+.page.p7 label[for=encierro] img {
+	margin-left: -125.7vh;
+}
+.page.p7 label[for=malRomp] img {
+	margin-left: -140.5vh;
+}
+.p7 .opciones p {
+    /* display: table-cell; */
+    /*font-size: 1.616rem;*/
+    font-size: 1.844vh;
+    left: 0;
+    margin: 0;
+    padding: 0.3em 0;
+    position: absolute;
+    top: 16.587vh;
+    width: 100%;
+}
+.p7 .opciones label {
+	display: block;
+	position: relative;
+}
+.p7 .opciones label .def {
+    background: url("../img/marco-sel-situa-def.png") center top/contain no-repeat;
+    display: none;
+    font-size: 0.52em;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.p7 .opciones label .def div {
+    /*background: #fcf474;*/
+    display: table-cell;
+    height: 16.667vh;
+    padding: 0 1em;
+    vertical-align: middle;
+}
+.p7 .opciones p .es {
+    display: block;
+    margin: 0;
+}
+.p7 .opciones p .en {
+	display: none;
+	margin: 0;
+}
+.p7 .opciones .check:hover label .def,
+.p7 .opciones .check:hover p .en {
+	display: block;
+}
+.p7 .opciones .check:hover p .es {
+	display: none;
+}
+.p7 .opciones .nivel0 p {
+	top: 0.067em;
+}
+/*Niveles*/
+.p7 .nivel1 p {
+	background-color: #fefbc7;
+}
+.p7 .nivel2 p {
+	background-color: #f7e3c0;
+}
+.p7 .nivel3 p {
+	background-color: #f0cbb9;
+}
+.p7 .nivel4 p {
+	background-color: #f1bfac;
+}
+.p7 .nivel5 p {
+	background-color: #edaba3;
+}
+.p7 .nivel6 p {
+	background-color: #e9979a;
+}
+.p7 .nivel7 p {
+	background-color: #e58391;
+	color: #fff;
+}
+.p7 .nivel8 p {
+	background-color: #e06f87;
+	color: #fff;
+}
+.p7 .nivel9 p {
+	background-color: #d84775;
+	color: #fff;
+}
+.p7 .nivel10 p {
+	background-color: #ce1174;
+	color: #fff;
+}
+.p7 .nivel11 p {
+	background-color: #b70d80;
+	color: #fff;
+}
+
+/*Juan*/
+.page.p7 .chulo {
+	right: calc(50% - 14.417vh/2 - 2.833vh/2);
+}
+.p7 .opciones .nivel0 p {
+	top: 0.067em;
+	padding: 4%;
+	
+}
+.page.p7 .nivel0 .impostor {
+	background-size: 100% 100%;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 8  +++ 
++++++++++++++++++**/
+.p8 .rect {
+	background-image: url(../img/fondos/rect-amarillo.png);
+	color: #5c4de6;
+}
+.p8 .rect p {
+	max-width: 450px;
+	margin: 1rem auto;
+}
+.p8 .rect .txt-l,
+.p8 .rect .consejo {
+	color: #b80d80;
+}
+.p8 .rect .txt-l {
+	margin-top: 32px;
+}
+.p8 .rect h2:after{
+	content: '';
+	display: block;
+	background: url(../img/elem/rect-linea-lila.png) no-repeat center;
+	width: 100%;
+	height: 20px;
+}
+
+/**++++++++++++++++
++++  Pagina 9  +++ 
++++++++++++++++++**/
+/*Niveles*/
+.p9.nivel1, .p8.nivel1 {
+	background-image: url(../img/fondos/r1-c1-f1.png);
+	background-color: #fefbc7;
+}
+.p9.nivel2, .p8.nivel2 {
+	background-image: url(../img/fondos/r1-c1-f2.png);
+	background-color: #f7e3c0;
+}
+.p9.nivel3, .p8.nivel3 {
+	background-image: url(../img/fondos/r1-c1-f3.png);
+	background-color: #f0cbb9;
+}
+.p9.nivel4, .p8.nivel4 {
+	background-image: url(../img/fondos/r1-c1-f4.png);
+	background-color: #f1bfac;
+}
+.p9.nivel5, .p8.nivel5 {
+	background-image: url(../img/fondos/r1-c1-f5.png);
+	background-color: #edaba3;
+}
+.p9.nivel6, .p8.nivel6 {
+	background-image: url(../img/fondos/r1-c1-f6.png);
+	background-color: #e9979a;
+}
+.p9.nivel7, .p8.nivel7 {
+	background-image: url(../img/fondos/r1-c1-f7.png);
+	background-color: #e58391;
+}
+.p9.nivel8, .p8.nivel8 {
+	background-image: url(../img/fondos/r1-c1-f8.png);
+	background-color: #e06f87;
+}
+.p9.nivel9, .p8.nivel9 {
+	background-image: url(../img/fondos/r1-c1-f9.png);
+	background-color: #d84775;
+}
+.p9.nivel10, .p8.nivel10 {
+	background-image: url(../img/fondos/r1-c1-f10.png);
+	background-color: #ce1174;
+}
+.p9.nivel11, .p8.nivel11 {
+	background-image: url(../img/fondos/r1-c1-f11.png);
+	background-color: #b70d80;
+}
+/*Pantalla 9*/
+.p9 {
+	background-image: url(../img/fondos/manchas-amarillo.png)!important;
+	
+}
+.p9 .bola {
+	background-image: url(../img/fondos/bola-amarillo.png);
+	/*padding*/
+}
+.p9 p {
+	margin: 1rem auto;
+	max-width: 450px;
+}
+.p9 .cifra {
+	position: relative;
+	padding-bottom: 2rem;
+}
+.p9 .cifra {
+	position:relative;
+	width: 100%;
+	max-width: 190px;
+	margin: 3.2rem auto 0;
+}
+.p9 .cifra .frase-cursiva {
+	color: #b80d80;
+}
+.p9 .cifra p:nth-child(3) {
+	font-family: 'Caveat', cursive;
+	font-size: 6rem;
+	color: #b80d80;
+}
+.p9 .cifra:before,
+.p9 .cifra:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 90px;
+	height: 100%;
+	background: url(../img/elem/bola-flechas-izq.png) no-repeat center;
+	background-size: contain;
+	top: 0;
+	left: -90px;
+}
+.p9 .cifra:after { 
+	background-image: url(../img/elem/bola-flechas-der.png);
+	right: -90px;
+	left: initial;
+}
+.p9 .consejo {
+	color: #b80d80;
+	position: relative;
+	max-width:50rem;
+	margin: 2rem auto 0 ;
+	padding: 1.5rem 0;
+}
+.bola .consejo:before,
+.bola .consejo:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	background: url(../img/elem/bola-linea-vino-L.png) no-repeat center;
+	top: 0;
+	left: 0;
+}
+.bola .consejo:after { 
+	background-image: url(../img/elem/bola-linea-vino-S.png);
+	bottom: 0;
+	top: initial;
+	max-width: 250px;
+	left: 50%;
+	margin-left: -125px;
+
+}
+.p9 .consejo .frase-cursiva {
+	
+	position: relative;
+	display: inline-block;
+}
+.p9 .consejo .frase-cursiva:before,
+.p9 .consejo .frase-cursiva:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 90px;
+	height: 100%;
+	background: url(../img/elem/rect-consejo-izq.png) no-repeat center;
+	background-size: contain;
+	top: 0;
+	left: -90px;
+}
+.p9 .consejo .frase-cursiva:after { 
+	background-image: url(../img/elem/rect-consejo-der.png);
+	right: -90px;
+	left: initial;
+}
+/*Juan*/
+.p9 .cifra:before {
+	background-image: url(../img/elem/rect-consejo-izq-azul.png);
+}
+.p9 .cifra:after {
+	background-image: url(../img/elem/rect-consejo-der-azul.png);
+}
+/*Juan*/
+
+/**++++++++++++++++
++++  Pagina 10  +++ 
++++++++++++++++++**/
+
+
+/*******************************************/
+/*         Estilos Provisionales          */
+
+.page.p10 .opciones {
+    height: 35vh;
+    margin-bottom: 14vh;
+	width: 68%;
+	margin-top: 10vh;
+}
+.page.p10 .opciones .check {
+	/*overflow: hidden;*/
+	width: 14.285%;
+	position: relative;
+}
+.page.p10 .opciones .check p {
+	padding: 3%;
+}
+.page.p10 .opciones .check.nivel0 {
+	bottom: -8vh;
+	left: calc(50% - 8.333%);
+	position: absolute;
+	/*width: */
+}
+.page.p10 .impostor {
+	background: url("../img/marco-sel-situa.png") center top/contain no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 8.3vh;
+	position: relative;
+	width: 14.417vh;
+}
+.page.p10 .impostor:hover {
+	/*padding-bottom: 10vh;*/
+}
+.page.p10 .nivel0 .impostor {
+	background: url("../img/marco-sel-situa-ninguna.png") center top/100% 100% no-repeat;
+	/*padding-bottom: 5vh;
+	position: relative;
+	width: 14.417vh;*/
+}
+.page.p10 .opciones .check p {
+	padding: 3%;
+}
+.page.p10 .nivel0 .impostor {
+    height: 2em;
+	padding-bottom: 0;
+	padding-top: .2em;
+}
+.page.p10 .nivel0 {
+	width: 17.285%;
+}
+.page.p10 .check img {
+	height: 16.667vh;
+	width: auto;
+}
+.page.p10 label[for=incAveces] img {
+	margin-left: 0.15vh;
+}
+.page.p10 label[for=incSiempre] img {
+	margin-left: -14.5vh;
+}
+.page.p10 label[for=lagrimas] img {
+	margin-left: -29vh;
+}
+.page.p10 label[for=rencor] img {
+	margin-left: -43.5vh;
+}
+.page.p10 label[for=desesperacion] img {
+	margin-left: -58vh;
+}
+.page.p10 label[for=terror] img {
+	margin-left: -72.5vh;
+}
+.page.p10 label[for=repulsion] img {
+	margin-left: -87vh;
+}
+.p10 .opciones p {
+    /* display: table-cell; */
+    /*font-size: 1.616rem;*/
+    font-size: 1.844vh;
+    left: 0;
+    margin: 0;
+    padding: 0.3em 0;
+    position: absolute;
+    top: 16.587vh;
+    width: 100%;
+}
+.p10 .opciones label {
+	display: block;
+	position: relative;
+}
+.p10 .opciones label .def {
+    background: url("../img/marco-sel-situa-def.png") center top/contain no-repeat;
+    display: none;
+    font-size: 0.52em;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.p10 .opciones label .def div {
+    display: table-cell;
+    height: 16.667vh;
+    padding: 0 1em;
+    vertical-align: middle;
+}
+.p10 .opciones p .es {
+    display: block;
+    margin: 0;
+}
+.p10 .opciones p .en {
+	display: none;
+	margin: 0;
+}
+.p10 .opciones .check:hover label .def,
+.p10 .opciones .check:hover p .en {
+	display: block;
+}
+.p10 .opciones .check:hover p .es {
+	display: none;
+}
+.p10 .opciones .nivel0 p {
+	top: 0.067em;
+}
+.p10 .check:nth-child(even) {
+    margin-top: 12vh;
+}
+.p10 .check.nivel0 {
+    margin-top: 0;
+}
+/*Niveles*/
+.p10 .nivel1 p {
+	background-color: #f0cbb9;
+	color: #b70d80;
+}
+.p10 .nivel2 p {
+	/*background-color: #f7e3c0;*/
+	background-color: #e29cab;
+	color: #fff2d8;
+}
+.p10 .nivel3 p {
+	background-color: #d36c9c;
+	color: #fff2d8;
+}
+.p10 .nivel4 p {
+	background-color: #cc5495;
+	color: #fff2d8;
+}
+.p10 .nivel5 p {
+	background-color: #be2587;
+	color: #fff2d8;
+}
+.p10 .nivel6 p {
+	background-color: #d70b80;
+	color: #fff2d8;
+	
+}
+.p10 .nivel7 p {
+	background-color: #cb0b5a;
+	color: #fff2d8;
+}
+/*Juan*/
+.page.p10 .opciones {
+	width: 78%;
+	margin-top: 6vh;
+}
+.p10 .impostor span {
+	font-size: 1.5vh;
+}
+.page.p10 .chulo {
+    right: calc(50% - 14.417vh/2 - 2.833vh/2);
+}
+.page.p10 .ui > h4 +img {
+	margin: 2.5vh auto;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 11  +++ 
++++++++++++++++++**/
+/*Pantalla 11*/
+.p11 .rect {
+	background-image: url(../img/fondos/rect-amarillo.png);
+	color: #5c4de6;
+}
+.p11 .rect h2:after{
+	content: '';
+	display: block;
+	background: url(../img/elem/rect-linea-lila.png) no-repeat center;
+	width: 100%;
+	height: 20px;
+}
+.p11 .txt-l { 
+	color: #b80d80;
+}
+.p11 .rect .consejo {
+	padding: 1rem 0;
+	max-width: 25rem;
+	color: #b80d80;
+	margin-top: -1rem;
+}
+/*Niveles*/
+.p11.nivel1 {
+	background-image: url(../img/fondos/r1-c2-f1.png);
+	background-color: #f0cbb9;
+}
+.p11.nivel2 {
+	background-image: url(../img/fondos/r1-c2-f2.png);
+	background-color: #e29cab;
+}
+.p11.nivel3 {
+	background-image: url(../img/fondos/r1-c2-f3.png);
+	background-color: #d36c9c;
+}
+.p11.nivel4 {
+	background-image: url(../img/fondos/r1-c2-f4.png);
+	background-color: #cc5495;
+}
+.p11.nivel5 {
+	background-image: url(../img/fondos/r1-c2-f5.png);
+	background-color: #be2587;
+}
+.p11.nivel6 {
+	background-image: url(../img/fondos/r1-c2-f6.png);
+	background-color: #b70d80;
+}
+.p11.nivel7 {
+	background-image: url(../img/fondos/r1-c2-f7.png);
+	background-color: #cb0b5a;
+}
+
+/**++++++++++++++++
++++  Pagina 12  +++ 
++++++++++++++++++**/
+/*Pantalla 12*/
+.p12 {
+	background-image: url(../img/fondos/corazon-llanto.png);
+	background-color: #5c4de6;
+	background-size: 40%;
+}
+.p12 .rect {
+	background-image: url(../img/fondos/rect-crema.png);
+	color: #5c4de6;
+}
+/*Pantalla 15 y 25*/
+.p15, .p25 {
+	background-image: url(../img/fondos/manchas-azul.png);
+	color: #5c4de6;
+}
+.p15 .nube,
+.p25 .nube {
+	background: url(../img/elem/nube-morada.png) no-repeat center;
+	background-size: contain;
+	/*max-width: 320px;*/
+	max-width: 420px;
+	margin: 0 auto;
+	/*padding: 3rem;*/
+	padding: 7rem;
+	color: #fff2d8;
+}
+.p25 .nube {
+	/*padding: 3.2rem 4rem;*/
+	padding: 8.75rem;
+}
+.p15 .nube a {
+	color: #fff2d8;
+}
+
+/**++++++++++++++++
++++  Pagina 13  +++ 
++++++++++++++++++**/
+/*Pantalla 13*/
+.p13,
+.p19,
+.p20,
+.p21 {
+	background-color: #fcf474;
+	background-image: url(../img/fondos/corazon-peque.png);
+}
+
+.p13.nivel1 .globo,
+.p13.nivel3 .globo {
+	background-image: url(../img/fondos/globo-azul.png);
+}
+.p13.nivel2 .globo {
+	background-image: url(../img/fondos/globo-rojo.png);
+}
+
+
+/**++++++++++++++++
++++  Pagina 14 y 36  +++ 
++++++++++++++++++**/
+/* Jansen */
+.p14, .p36 {
+	overflow: hidden;
+}
+.page .multiPage {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+.p14 .multiPage {
+	height: 800vh;
+}
+.p36 .multiPage {
+	height: 700vh;
+}
+/* Jansen END */
+.tipoTip .sp1 img {
+	height: 30vh;
+	width: auto;
+	margin-bottom: 3vh;
+}
+.tipoTip .sp1 h3,
+.tipoTip .finTip h3 {
+	font-size: 4.5rem;
+}
+.tipoTip .sp1 {
+	background-color: #37e7db;
+	background-image: url(../img/fondos/manchas-azul.png);
+	position: relative;
+}
+.tipoTip p {
+	margin: 5vh auto;
+	max-width: 34em;
+}
+.tipoTip .sp1 p span.frase-cursiva {
+	font-size: 5rem;
+	color: #fff2d8;
+	margin: 3vh 0 1vh;
+	display: block;
+}
+.tipoTip a.tipDescarga {
+	position: absolute;
+	right:8vh;
+	bottom:3vh;
+	text-align: left;
+	color: #4c54fc;
+}
+.tipoTip a.tipDescarga .litu-i {
+	display: block;
+	width: 6vh;
+	overflow: hidden;
+	float: left;
+	margin-right: 0.7vh;
+}
+.tipoTip a.tipDescarga:hover {
+	color: #fff2d8;
+	text-decoration: none;
+}
+.tipoTip a.tipDescarga .litu-i img {
+	height: 6vh;
+	width: auto;
+}
+.tipoTip  a.tipDescarga .litu-i img {
+	margin-left: -18vh;
+	margin-top: -.5vh;
+}
+/*tips*/
+.tipoTip .tip {
+ background-image: url(../img/fondos/manchas-azul.png);
+ position: relative;
+}
+.tipoTip .tip h4 {
+	font-family: 'Caveat', cursive;
+	font-size: 7.8rem;
+}
+.tipoTip  .vino {
+	color: #b80d80;
+}
+.tipoTip .tip .frase-cursiva {
+	color: #b80d80;
+	font-size: 5rem;
+}
+.tipoTip .tip a.tipDescarga:hover, .tipoTip .tipDescarga a:hover {
+	color: #37e7db;
+	text-decoration: none;
+}
+.tipoTip .imgTip {
+	position: absolute;
+	height: 35vh;
+	width: auto;
+}
+.tipoTip .imgTipIzq {
+	left: 5%;
+	top: 8vh;
+}
+.tipoTip .imgTipDer {
+	right: 7%;
+	bottom: 15vh;
+}
+/*Fin de tips*/
+.tipoTip .finTip {
+	 background-image: url(../img/fondos/manchas-azul.png);
+	 position: relative;
+}
+.tipoTip .finTip .tipDescarga .litu-i {
+	display: block;
+	width: 6vh;
+	overflow: hidden;
+	margin: 0 auto .2vh;
+}
+.tipoTip a.tipDescarga:hover {
+	color: #fff2d8;
+	text-decoration: none;
+}
+.tipoTip .tipDescarga .litu-i img {
+	height: 6vh;
+	width: auto;
+}
+.tipoTip  .tipDescarga .litu-i img {
+	margin-left: -18vh;
+	margin-top: -.5vh;
+}
+
+/**++++++++++++++++
++++  Pagina 16 y 37  +++ 
++++++++++++++++++**/
+/* Jansen */
+.p16, .p37 {
+	overflow: hidden;
+	position: relative;
+}
+.p16 .multiPage, .p37 .multiPage {
+	height: 200vh;
+}
+/* Jansen END */
+.p16 h3,
+.p37 h3 {
+	font-size: 3.5rem;
+	margin-bottom: 3vh;
+}
+.p16 .sp1
+ {
+	background-image: url(../img/fondos/manchas-azul.png);
+	background-color:#fcf474;
+}
+.p37 .sp1,
+.p37 .sp2 {
+		background-image: url(../img/fondos/manchas-azul.png);
+
+}
+.p16 .contPostalesMini,
+.p37 .contPostalesMini {
+	width: 100%;
+	overflow: hidden;
+}
+.p16 .verMas,
+.p37 .verMas {
+	clear: left;
+	display: block;
+	text-transform: uppercase;
+	background-color: #4c54fc;
+	width: 20rem;
+	margin: 3vh auto;
+	padding: 1vh;
+	border-radius: 8px;
+	color: #fff2d8;
+}
+.p16 .verMas:hover,
+.p37 .verMas:hover {
+	text-decoration: none;
+	background-color: #b80d80;
+}
+.p16 .sp1 .postalMini,
+.p37 .sp1 .postalMini {
+	float: left;
+	width: 45%;
+	height: auto;
+	margin: 0 2.5%;
+
+}
+.p16 .sp2 {
+	background-image: url(../img/fondos/manchas-azul.png);
+	background-color:#fcf474;
+}
+.p16 .sp2 .contPostalesMini,
+.p37 .sp2 .contPostalesMini { 
+	text-align: center;
+}
+.p16 .sp2 .sharePostal,
+.p37 .sp2 .sharePostal {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+.p16 .sp2 .sharePostal:after,
+.p37 .sp2 .sharePostal:after {
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	display: block;
+	background: #4c54fc url(../img/elem/litu-share-crema.png) center/70% no-repeat;
+	border-radius: 8px;
+	bottom:0;
+	right: 0; 
+}
+.p37 .sp2 .sharePostal:after {
+	background-color: #4c54fc;
+}
+.p16 .sp2 .sharePostal:hover:after,
+.p37 .sp2 .sharePostal:hover:after {
+	background-color: #b80d80;
+}
+.p16 .sp2 .postalMini,
+.p37 .sp2 .postalMini {
+	width: auto;
+	height: 25vh;
+	max-height: 240px;
+	margin: 1vh .5vh;
+
+}
+/******************************
+********Estilos postales ******
+***** Html independiente ******
+******************************/
+.p16:first-child {
+	display: block;
+}
+.p16:first-child .singlePage {
+	position: relative;
+}
+.p16 .sp2::before {
+	z-index: -1;
+}
+.p17:last-child {
+	display: block;
+	/*left: 50%;*/
+	position: relative;
+}
+
+
+
+/**++++++++++++++++
++++  Pagina 18  +++ 
++++++++++++++++++**/
+/*Pantalla 18*/
+.p18 {
+	background-image: url(../img/fondos/corazon-feliz.png);
+	background-color: #fcf474;
+	background-size: 40%;
+}
+.p18 .rect {
+	background-image: url(../img/fondos/rect-crema.png);
+	color: #5c4de6;
+}
+.p18 .rect p {
+	max-width: 450px;
+	margin: 1rem auto;
+}
+
+.p18 .rect .txt-l {
+	margin-top: 32px;
+}
+
+/**+++++++++++++++++++++++++
++++  Pagina 19, 20 y 21  +++ 
++++++++++++++++++++++++++**/
+/*Pantalla 19,20 y 21*/
+.p19 .globo,
+.p21 .globo {
+	background-image: url(../img/fondos/globo-azul.png);
+}
+.p19 .globo,
+.p20 .globo,
+.p21 .globo {
+	padding-top: 8%;/*Areglar en responsive*/
+}
+.p19 .globo:before,
+.p19 .globo:after,
+.p20 .globo:before,
+.p20 .globo:after,
+.p21 .globo:before,
+.p21 .globo:after {
+	background-image: url(../img/elem/corazon-feliz.png);
+	
+}
+
+/*Juan*/
+.p20 .globo:before,
+.p20 .globo:after {
+	background-image: url(../img/elem/corazon-dichoso.png);
+}
+.p19 .col-xs-3 .txt-l,
+.p20 .col-xs-3 .txt-l,
+.p21 .col-xs-3 .txt-l {
+	margin-bottom: 0;
+}
+.p19 .col-xs-3 .frase-cursiva,
+.p20 .col-xs-3 .frase-cursiva,
+.p21 .col-xs-3 .frase-cursiva {
+	margin-top: 0;
+	position: relative;
+}
+.p19 .col-xs-3 .frase-cursiva:before,
+.p19 .col-xs-3 .frase-cursiva:after,
+.p20 .col-xs-3 .frase-cursiva:before,
+.p20 .col-xs-3 .frase-cursiva:after,
+.p21 .col-xs-3 .frase-cursiva:before,
+.p21 .col-xs-3 .frase-cursiva:after {
+content: '';
+	display: block;
+	position: absolute;
+	width: 90px;
+	height: 100%;
+	background: url(../img/elem/rect-consejo-izq-azul.png) no-repeat center;
+	background-size: contain;
+	top: 10px;
+	left: -20px;
+}
+.p19 .col-xs-3 .frase-cursiva:after,
+.p20 .col-xs-3 .frase-cursiva:after,
+.p21 .col-xs-3 .frase-cursiva:after { 
+	background-image: url(../img/elem/rect-consejo-der-azul.png); 
+	right: -20px;
+	left: initial;
+}
+/*Juan*/
+
+/**++++++++++++++++
++++  Pagina 22  +++ 
++++++++++++++++++**/
+
+
+/*******************************************/
+/*         Estilos Provisionales          */
+.page.p22 h3 {
+	margin-top: 3vh;
+	margin-bottom: 5.167vh;
+	color: #b80d80;
+}
+
+.page.p22 h3 span {
+	display: block;
+	margin-top: 2vh;
+}
+/*.page.p22 span {
+	display: block;
+	margin-top: 3.833vh;
+}*/
+.page.p22 .opciones {
+    height: 31vh;
+    /*margin-bottom: 24vh;*/
+    width: 68%;
+}
+.page.p22 .opciones .radio {
+	/*overflow: hidden;*/
+	width: 33.333333%;
+}
+.page.p22 .radio img {
+	height: 19vh;
+	width: auto;
+	margin-top: 2vh;
+	
+}
+.page.p22 .impostor {
+	background: url("../img/marco-sel-etnia.png") center 3%/contain no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 18.25vh;
+}
+.page.p22 .impostor p {
+	margin: 0;
+	color: #fff2d8;
+	background: url("../img/fondos/btn-fondo-lila.png") top/100% 100% no-repeat;
+	padding: 5%;
+}
+.page.p22 .radio .chulo {
+	
+	right: calc(50% - 18.25vh/2 - 2.833vh/2);
+}
+
+.page.p22 label[for=interviene] img {
+	margin-left: -1vh;
+}
+.page.p22 label[for=llamaAutoridad] img {
+	margin-left: -21vh;
+}
+.page.p22 label[for=nadaHace] img {
+	margin-left: -42vh;
+}
+
+/**++++++++++++++++
++++  Pagina 23  +++ 
++++++++++++++++++**/
+/*Pantalla 23*/
+.p23 {
+	
+	background-color: #fff2d8;
+	background-size: 40%;
+}
+.p23 .rect {
+	background-image: url(../img/fondos/rect-azul.png);
+	color: #fff2d8;
+}
+.p23 .rect .consejo:before { 
+	background-image: url(../img/elem/rect-consejo-izq-crema.png);
+}
+.p23 .rect h2 {
+	color: #fcf474; 
+}
+.p23 .rect .txt-l > span {
+	display: block;
+	position: relative;
+	/*background-image: url(../img/elem/.png);*/
+}
+.p23 .rect .consejo:after { 
+	background-image: url(../img/elem/rect-consejo-der-crema.png);
+}
+
+/*Niveles*/
+.p23.nivel1{
+	background-image: url(../img/fondos/r2-c1-f1.png);
+}
+.p23.nivel2{
+	background-image: url(../img/fondos/r2-c1-f2.png);
+}
+.p23.nivel3{
+	background-image: url(../img/fondos/r2-c1-f3.png);
+}
+/*Juan*/
+.p23 .rect .txt-l {
+	font-size: 2.5rem;
+}
+.p23 .rect h2 {
+	font-size: 9rem;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 24  +++ 
++++++++++++++++++**/
+
+/*Juan NUEVAAAAA*/
+.p24 {
+	background-image: url(../img/fondos/manchas-azul.png)!important;
+	background-color: #fcf474;
+	
+}
+.p24 .bola {
+	background-image: url(../img/fondos/bola-azul.png);
+	color: #fcf474;
+}
+.p24 p {
+	margin: 1rem auto;
+	max-width: 450px;
+}
+.p24 .cifra   {
+	position:relative;
+	width: 100%;
+	padding-bottom: 2rem;
+	max-width: 200px;
+	margin: 3.2rem auto 0;
+
+}
+.p24 .cifra:before,
+.p24 .cifra:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 90px;
+	height: 100%;
+	background: url(../img/elem/bola-rayas-izq-cian.png) no-repeat center;
+	background-size: contain;
+	top: 0;
+	left: -90px;
+}
+.p24 .cifra:after { 
+	background-image: url(../img/elem/bola-rayas-der-cian.png);
+	right: -90px;
+	left: initial;
+}
+.p24 .cifra p:nth-child(3) {
+	font-family: 'Caveat', cursive;
+	font-size: 5rem;
+	
+}
+.p24 .consejo {
+	position: relative;
+	max-width:50rem;
+	margin: 2rem auto 0 ;
+	padding: 3rem 0;
+	color: #37e7db;
+}
+.p24 .consejo:before { 
+	background-image: url(../img/elem/bola-linea-cian-L.png);
+}
+.p24 .consejo:after { 
+	background-image: url(../img/elem/bola-linea-cian-S.png);
+}
+
+
+
+
+/**++++++++++++++++
++++  Pagina 26  +++ 
++++++++++++++++++**/
+/*Pantalla 26*/
+.p26 {
+	background-image: url(../img/fondos/manchas-azul.png);
+	background-color: #fcf474;
+}
+.p26 .txt-l {
+	max-width: 25em;
+	margin-right: auto;
+	margin-left: auto;
+}
+.p26 .frase-cursiva {
+	color: #b80d80;
+}
+/*Juan*/
+.p26 h3 {
+	font-size: 4.5rem;
+	max-width: 15em;
+	margin-right: auto;
+	margin-left: auto;
+}
+.p26 p {
+	max-width: 23em;
+}
+.p26 img {
+	width: auto;
+	height: 40vh;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 27  +++ 
++++++++++++++++++**/
+
+
+/*******************************************/
+/*         Estilos Provisionales          */
+.page.p27 h3 {
+	margin-bottom: 6vh;
+}
+.page.p27 .opciones {
+    height: 35vh;
+   	width: 68%;
+}
+.page.p27 .opciones .check {
+	/*overflow: hidden;*/
+	width: 25%;
+	position: relative;
+}
+.page.p27 .impostor {
+	background: url("../img/marco-sel-situa.png") center top/contain no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 8.3vh;
+	position: relative;
+	width: 18.25vh;
+}
+.page.p27 .impostor p {
+	margin: 0;
+	color: #fff2d8;
+	background: url("../img/fondos/btn-fondo-lila.png") top/100% 100% no-repeat;
+	padding: 5%;
+}
+.page.p27 .chulo {
+	right: calc(50% - 18.25vh/2 - 2.833vh/2);
+}
+.page.p27 .check img {
+	height: 16.667vh;
+	width: auto;
+}
+.page.p27 label[for=extranjero] img {
+	margin-left: 1.15vh;
+}
+.page.p27 label[for=compatriota] img {
+	margin-left: -14.5vh;
+}
+.page.p27 label[for=otroColor] img {
+	margin-left: -30.1vh;
+}
+.page.p27 label[for=aceptoVeci] img {
+	margin-left: -47.1vh;
+}
+.p27 .opciones p {
+    /* display: table-cell; */
+    /*font-size: 1.616rem;*/
+    font-size: 1.844vh;
+    left: 0;
+    margin: 0;
+    padding: 0.3em 0;
+    position: absolute;
+    top: 16.587vh;
+    width: 100%;
+}
+.p27 .opciones label {
+	display: block;
+	position: relative;
+}
+
+/*Juan*/
+.page.p27 .opciones {
+    height: initial;
+   	width: 78%;
+}
+.page.p27 .impostor {
+	width: 21vh;
+	padding-bottom: 9.3vh;
+}
+.page.p27 .chulo {
+	right: calc(50% - 21vh/2 - 2.833vh/2);
+}
+.page.p27 .check img {
+	height: 24vh;
+	width: auto;
+}
+.page.p27 label[for=extranjero] img {
+	margin-left: -1.15vh;
+}
+.page.p27 label[for=compatriota] img {
+	margin-left: -23.5vh;
+}
+.page.p27 label[for=otroColor] img {
+	margin-left: -45.1vh;
+}
+.page.p27 label[for=aceptoVeci] img {
+	margin-left: -68.1vh;
+}
+.p27 .opciones p {
+    
+    top: 24vh;;
+    width: 100%;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 29  +++ 
++++++++++++++++++**/
+/*Pantalla 29*/
+.p29 {
+	background-color: #4c54fc;
+	background-size: 40%;
+}
+.p29 .rect {
+	background-image: url(../img/fondos/rect-crema.png);
+	color: #5c4de6;
+}
+/*Niveles*/
+.p29.nivel1{
+	background-image: url(../img/fondos/r3-c1-f1.png);
+}
+.p29.nivel2,
+.p29.nivel3 {
+	background-image: url(../img/fondos/r3-c1-f2.png);
+}
+/*Juan*/
+.p29 p {
+	font-size: 2rem;
+	margin-top: 2.3vh;
+	margin-bottom: 2.3vh;
+}
+.p29 .txt-l {
+	font-size: 2.8rem;
+}
+.p29.nivel3 {
+	background-image: url(../img/fondos/r3-c1-f3.png);
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 30  +++ 
++++++++++++++++++**/
+
+
+/*******************************************/
+/*         Estilos Provisionales          */
+.page.p30 h3 {
+	margin-bottom: 6vh;
+}
+.page.p30 .opciones {
+    /*height: 36vh;*/
+    /*margin-bottom: 24vh;*/
+	width: 68%;
+}
+.page.p30 .opciones > div {
+	width: 20%;
+}
+
+.page.p30 .impostor {
+	background: url("../img/marco-sel-situa.png") center top/contain no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 1vh;
+	position: relative;
+	width: 16vh;
+}
+.page.p30 .impostor:hover {
+	/*padding-bottom: 10vh;*/
+}
+.page.p30  img {
+	height: 16vh;
+	width: auto;
+	margin-top: 1.5vh;
+}
+.page.p30 .impostor p {
+	background: url("../img/fondos/btn-fondo-lila.png") top/100% 100% no-repeat;
+	color: #fff2d8;
+	font-size: 2rem;
+	margin: 1vh 0 0 ;
+	padding: 5%;
+}
+.page.p30 .multiRadio {
+	margin: 0 auto;
+	width: 16vh;
+}
+.page.p30 .multiRadio p {
+    margin-top: 1.25vh;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 2.833vh;
+    font-size: .9em;
+}
+.page.p30 .multiRadio .chulo {
+    position: absolute;
+    right: initial;
+    top: -.6vh;
+    left: 0;
+    width: 2.833vh;
+}
+.page.p30 .opciones .multi2 img {
+	margin-left: -15.1vh;
+}
+.page.p30 .opciones .multi3 img {
+	margin-left: -30.1vh;
+}
+.page.p30 .opciones .multi4 img {
+	margin-left: -45.5vh;
+}
+.page.p30 .opciones .multi5 img {
+	margin-left: -63.2vh;
+}
+/*Juan*/
+.p30 .vino {
+	color: #b80d80;
+}
+.page.p30 h3 {
+	margin-bottom: 3vh;
+}
+.page.p30 .opciones {
+	margin-bottom: 6vh;
+}
+.page.p30 .impostor p {
+	font-size: 2rem;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 32  +++ 
++++++++++++++++++**/
+/*Pantalla 32*/
+.p32 {
+	background-color: #fcf474;
+	background-size: 40%;
+}
+.p32 .rect {
+	background-image: url(../img/fondos/rect-crema.png);
+	color: #5c4de6;
+}
+/*Niveles*/
+.p32.nivel1{
+	background-image: url(../img/fondos/r3-c2-f1.png);
+}
+.p32.nivel2{
+	background-image: url(../img/fondos/r3-c2-f2.png);
+}
+.p32.nivel3{
+	background-image: url(../img/fondos/r3-c2-f3.png);
+}
+
+/**++++++++++++++++
++++  Pagina 33  +++ 
++++++++++++++++++**/
+/*Pantalla 33*/
+.p33 img {
+	max-width: 600px;
+	margin-top: 48px;
+	margin-bottom: 48px;
+}
+.p33 .opciones {
+	width: 30%;
+}
+.p33 .radio {
+	width: 50%;
+}
+.btn-litu {
+	background: url(../img/elem/btn-litu.png) no-repeat center;
+	background-size: 100% 100%;
+	color: #fff2d8;
+	padding: 15px 60px;
+	margin: 8px 20px;
+}
+input:checked ~ .btn-litu {
+	background: url(../img/elem/btn-litu.png) center/96% 90% no-repeat, url(../img/elem/btn-idio.png) center/100% 100% no-repeat;
+}
+.p33 .impostor.btn-litu {
+    height: 2.2em;
+	margin: 0;
+    padding: 0;
+    width: 70%;
+}
+.p33 .impostor.btn-litu label {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.p33 .impostor.btn-litu p {
+    margin: 0;
+    padding: 0.4em 0;
+    vertical-align: middle;
+    width: 100%;
+}
+.p33 .radio:last-child .impostor.btn-litu {
+	margin-left: 29%;
+}
+/*Juan*/
+.btn-litu:hover, .btn-litu:active, .btn-litu:focus {
+	text-decoration: none;
+	color: #fcf474;
+}
+/*Juan*/
+/**++++++++++++++++
++++  Pagina 35  +++ 
++++++++++++++++++**/
+/*Pantalla 35*/
+.p35 {
+	background-color: #4c54fc;
+	background-size: 40%;
+}
+.p35 .rect {
+	background-image: url(../img/fondos/rect-crema.png);
+	color: #5c4de6;
+}
+/*Niveles*/
+.p35.nivel1,
+.p35.nivel2 {
+	background-image: url(../img/fondos/r3-c3-f1.png);
+}
+
+/**+++++++++++++++++++++++++++++++++++++++++
++++  Paginas 28, 31 y 34 - Bolas Ruta 3  +++ 
++++++++++++++++++++++++++++++++++++++++++**/
+/*Pantalla 28, 31 y 34 - Bolas Ruta 3*/
+.p28, .p31, .p34 {
+	background-image: url(../img/fondos/manchas-azul.png)!important;
+	background-color: #fcf474;
+	
+}
+.p28 .bola,
+.p31 .bola,
+.p34 .bola {
+	background-image: url(../img/fondos/bola-azul.png);
+	color: #fcf474;
+}
+.p28 p,
+.p31 p,
+.p34 p {
+	margin: 1rem auto;
+	max-width: 450px;
+}
+.p28 .cifra,
+.p31 .cifra,
+.p34 .cifra   {
+	position:relative;
+	width: 100%;
+	padding-bottom: 2rem;
+	max-width: 200px;
+	margin: 3.2rem auto 0;
+}
+.p28 .cifra:before,
+.p28 .cifra:after,
+.p31 .cifra:before,
+.p31 .cifra:after,
+.p34 .cifra:before,
+.p34 .cifra:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 90px;
+	height: 100%;
+	background: url(../img/elem/bola-rayas-izq-cian.png) no-repeat center;
+	background-size: contain;
+	top: 0;
+	left: -90px;
+}
+.p28 .cifra:after,
+.p31 .cifra:after,
+.p34 .cifra:after { 
+	background-image: url(../img/elem/bola-rayas-der-cian.png);
+	right: -90px;
+	left: initial;
+}
+.p28 .cifra p:nth-child(3),
+.p31 .cifra p:nth-child(3),
+.p34 .cifra p:nth-child(4) {
+	font-family: 'Caveat', cursive;
+	font-size: 5rem;
+	
+}
+.p28 .consejo,
+.p31 .consejo,
+.p34 .consejo {
+	position: relative;
+	max-width:50rem;
+	margin: 2rem auto 0 ;
+	padding: 3rem 0;
+}
+.p28 .consejo:before,
+.p31 .consejo:before,
+.p34 .consejo:before { 
+	background-image: url(../img/elem/bola-linea-cian-L.png);
+}
+.p28 .consejo:after,
+.p31 .consejo:after,
+.p34 .consejo:after { 
+	background-image: url(../img/elem/bola-linea-cian-S.png);
+}
+/*Juan*/
+.p28 .txt-s {
+	font-size: 1.6rem;
+	max-width: 30em;
+	color: #37e7db;
+}
+/*Juan*/
+/**++++++++++++++++++++++++
++++  Paginas 17 y 38    +++ 
+++++++++++++++++++++++++**/
+/*p17 y p38*/
+.p17 .preg, .p38 .preg {
+	margin-bottom: 12vh;
+}
+.linkCierre {
+	display: block;
+	max-width: 300px;
+	margin: 0 auto;
+	color: #fff2d8;
+	text-decoration: none;
+}
+.linkCierre:hover {
+	color: #fcf474;
+	text-decoration: none;
+}
+.linkCierre p {
+	background: url(../img/fondos/btn-cierre-fondo-2.png) no-repeat center top;
+	background-size: 100% 100%;
+	min-height: 90px;
+	margin: 0 auto;
+	padding: 18px;
+	
+}
+/**++++++++++++++++++++++++
++++  Paginas TEmp ruletas +++ 
+++++++++++++++++++++++++**/
+.page.ruleta {
+	background-image: url(../img/fondos/manchas-azul.png)!important;
+	background-color: #fcf474;
+}
+.page.ruleta h3 {
+	font-size: 3.5rem;
+}
+.page.ruleta img {
+	height: 50vh;
+	width: auto;
+	margin: 8vh 0 1vh;
+}
+/*Aniamcion*/
+@-webkit-keyframes infinite-spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+  }
+}
+@-moz-keyframes infinite-spinning {
+  from {
+    -moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+	transform: rotate(360deg);
+  }
+}
+@-o-keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.page.ruleta img {
+  -webkit-animation: infinite-spinning 3s infinite; /* Safari 4+ */
+  -moz-animation:    infinite-spinning 3s infinite; /* Fx 5+ */
+  -o-animation:      infinite-spinning 3s infinite; /* Opera 12+ */
+  animation:         infinite-spinning 3s infinite; /* IE 10+, Fx 29+ */
+}
+
+/*****************************************************************/
+/*                    Estilos Para testing                      */
+/*      para no tener que recorrer toda la encuesta,           */
+/*          para que funcionen hay que comentar               */
+/*           las lÃ­neas  35 y 36 de Javascript               */
+/*.page {
+	display: none;
+}
+.page.p5 {
+	display: block;
+}*/
+
+/*******************************************/
+/*              Tooltip mapas             */
+#tip {
+	background: rgba(255,255,255,0.65);
+	display: none;
+	font-family: 'Caveat', cursive;
+	font-size: 0.857em;
+	height: auto;
+	left: 509px;
+	padding: 1.167em;
+	position: absolute;
+	text-align: right;
+	top: 280px;
+	width: auto;
+	z-index: 99;	
+}
+/*Postales*/
+.postal {
+	height: 70vh;
+	width: auto;
+}
+
+.litu-btn-f,
+.litu-btn-t {
+	height: 7vh;
+	width: 7vh;
+	overflow: hidden;
+	display: inline-block;
+	margin-top: 2vh;
+}
+.litu-btn-f img,
+.litu-btn-t img {
+	height: 7vh;
+	width: auto;
+}
+.litu-btn-t img { 
+	margin-left: -7vh;
+}

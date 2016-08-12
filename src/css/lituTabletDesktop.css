@@ -1,0 +1,65 @@
+/* Esta hoja de estilos es continuación de litu.css aquí se encuentran los estilos para pantallas con un ancho mayor a 640px */
+
+html {
+	font-size: 8px;
+}
+body {
+	/*font-size: 1rem;*/
+	overflow: hidden;
+}
+a {
+}
+nav {
+}
+nav .izq, nav .der, nav.vertical .pArr, nav.vertical .pAba {
+	background: #fff2d8;
+	border-width: 3px;
+	height: 4.737rem;
+	top: calc(50vh - 2.368rem);
+	width: 4.737rem;
+}
+nav .izq:hover, nav .der:hover, nav.vertical .pArr:hover, nav.vertical .pAba:hover {
+	/*background-color: rgba(76,84,252,0.25);*/
+	background-color: #d1ce96;
+}
+nav .izq {
+	left: 2rem;
+}
+nav .der {
+	right: 2rem;
+}
+nav.vertical .pArr {
+	top: 1vh;
+}
+nav.vertical .pAba {
+	top: calc(99vh - 4.737rem);
+}
+#mainWrapper, #amor {
+	
+}
+.page {
+	/*padding: 5vh 5%; 
+	width: 90%;*/
+}
+
+
+
+/**++++++++++++++++
++++  Pagina 1  +++ 
++++++++++++++++++**/
+h1 {
+	font-size: 4.2rem;
+}
+h1 span {
+	top: 19vh;
+	width: 100%;
+}
+.p1 header p,
+.p1 .invita {
+	font-size: 2.1rem;
+	width: 42.917%;
+}
+.invita a {
+    font-size: 4rem;
+    margin: 2.5em 0 0;
+}
