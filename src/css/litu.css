@@ -2375,6 +2375,22 @@ input[type=range]:focus::-ms-fill-upper {
 .p36 .multiPage {
 	height: 700vh;
 }
+
+.p14.tipoTip .sp1.ruta1 h3 {
+	display: block;
+}
+.p14.tipoTip .sp1.ruta2 h3 {
+	display: none;
+}
+.p14.tipoTip .sp1.ruta2 .txt-l {
+	max-width: 16em;
+}
+.p14.tipoTip .sp1.ruta2 .txt-l span {
+	margin: 3vh -3em 1vh;
+}
+.p14.tipoTip .sp8 h4, .p36.tipoTip .sp7 h4 {
+    margin-bottom: 1.2em;
+}
 /* Jansen END */
 .tipoTip .sp1 img {
 	height: 30vh;
@@ -2507,7 +2523,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .p37 .sp1,
 .p37 .sp2 {
-		background-image: url(../img/fondos/manchas-azul.png);
+	background-image: url(../img/fondos/manchas-azul.png);
+	position: relative;
 
 }
 .p16 .contPostalesMini,
@@ -2550,9 +2567,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .p16 .sp2 .sharePostal,
 .p37 .sp2 .sharePostal {
-	position: relative;
-	overflow: hidden;
 	display: inline-block;
+	overflow: hidden;
+	position: relative;
 }
 .p16 .sp2 .sharePostal:after,
 .p37 .sp2 .sharePostal:after {
@@ -3320,6 +3337,13 @@ input:checked ~ .btn-litu {
 /**++++++++++++++++++++++++
 +++  Paginas TEmp ruletas +++ 
 ++++++++++++++++++++++++**/
+/* Jansen */
+.pTemp1, .pTemp2 {
+	position: fixed;
+	z-index: 999999;
+	display: none;
+}
+/* Jansen */
 .page.ruleta {
 	background-image: url(../img/fondos/manchas-azul.png)!important;
 	background-color: #fcf474;
@@ -3426,4 +3450,41 @@ input:checked ~ .btn-litu {
 }
 .litu-btn-t img { 
 	margin-left: -7vh;
+}
+
+
+nav#toWebsite {
+	position: fixed;
+	z-index: 999;
+	text-align: left;
+}
+nav#toWebsite a {
+	display: inline-block;
+	margin: 12px;
+	text-decoration: none!important;
+}
+nav#toWebsite a .iCasita {
+	display: block;
+	background-color:#241c66;
+	border-radius: 50%;
+	font-size: 3.2rem;
+	color: #fcf573;
+	margin: 0 auto;
+	width: 5rem;
+	height: 5rem;
+	padding-left: 1rem;
+	padding-top: .8rem;
+	-moz-transition: color 500ms ease;
+	-webkit-transition: color 500ms ease;
+	transition: color 500ms ease;
+}
+nav#toWebsite a .leyenda{
+	color: #241c66;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	line-height: 3;
+	font-weight: 700;
+}
+nav#toWebsite a:hover .iCasita {
+	color: #7dedb5;
 }

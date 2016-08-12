@@ -165,8 +165,13 @@ function lee() {
 		} else {
 			val = inp.attr('value');
 		}
-
 		pasa = inpColl;
+		if (actu === 27) {
+		pasa = parseInt(317);
+		}
+		if (actu === 33) {
+		pasa = parseInt(317);
+		}
 		_lt._alerta = 0;
 		// loga('inp: ',inp);
 		loga('val: ',val+', actu: '+actu+', _lt._camino: '+_lt._camino);
@@ -199,6 +204,8 @@ function lee() {
 			//Aquí hay que validar todos los campos
 			//Incluidos el slider de la edad, checkbox de escolaridad
 			//y los checkbox de idioma
+	} else if (actu === 11) {
+		pasa = parseInt(316);
 	} else if (actu === 30) {
 		var acuerData = $('.p'+_lt._camino[_lt._actual]+' input:checked'),
 			acuerDataColl = acuerData.length;
@@ -224,7 +231,8 @@ function lee() {
 					nivel = 2;
 				}
 				aplicaNiveles(32, nivel, true, 'rect');
-				pasa = 1;
+				// pasa = 1;
+				pasa = parseInt(317);
 			}
 		} else {
 			val = acuerData.attr('value')
@@ -378,6 +386,7 @@ function lee() {
 					_lt._ruta = 2;
 					loga('es 0 ar: ',ar);
 					setRuta(ar, 1);
+					pasa = 316;
 				} else {
 					var ar = _lt._camino.concat(_lt._r1parcial);
 					_lt._ruta = 1;
@@ -448,6 +457,7 @@ function lee() {
 					var ar = _lt._camino.concat(_lt._r1noEmo);
 					loga('No hay emocion, ar: ',ar);
 					setRuta(ar, 1);
+					pasa = parseInt(316);
 					// var nuevoNivel = Math.ceil(_lt._situa * 0.636);
 					loga('Como el nivel es 0, sigue a la 12, _lt._situa: ',_lt._situa);
 				} else {
@@ -459,12 +469,20 @@ function lee() {
 				};
 			}
 		break;
-		/*case 13:
+		case 13:
+			if (!_lt._reversa) {
+				$('.p14 .sp1').removeClass('ruta2').addClass('ruta1');
+			}
 		break;
-		case 15:
+		/*case 15:
 			initVert();
 			if (_lt._reversa) {}
 		break;*/
+		case 21:
+			if (!_lt._reversa) {
+				$('.p14 .sp1').removeClass('ruta1').addClass('ruta2');
+			}
+		break;
 		case 22:
 			if(!_lt._reversa){
 				var quees=typeof val,
@@ -604,9 +622,25 @@ function desli(esto) {
 		alertaEl.removeClass('active');
 	};
 	if (dir === 'der') {
-		if (pasa) {
+		if (pasa && pasa < 316) {
 			$('#mainNav .izq').off('click').siblings('.der').off('click');
 			fw();
+		} else if (pasa === 316) {
+			$('#mainNav .izq').off('click').siblings('.der').off('click');
+			// $('.pTemp1').show('fast').css('left', 0);
+			$('.pTemp1').css('left', 0).fadeIn( "slow");
+			setTimeout(function() {
+				$('.pTemp1').hide('slow');
+				fw();
+			}, 2000);
+		} else if (pasa === 317) {
+			$('#mainNav .izq').off('click').siblings('.der').off('click');
+			// $('.pTemp2').show('fast').css('left', 0);
+			$('.pTemp2').css('left', 0).fadeIn( "slow");
+			setTimeout(function() {
+				$('.pTemp2').hide('slow');
+				fw();
+			}, 2000);
 		} else {
 			alertaEl.html(msg[_lt._alerta]).addClass('active');
 		}
@@ -664,15 +698,18 @@ function move(nuevoCont,vel) {
 function displayFlechas() {
 	switch(_lt._actual) {
 	case 1:
+		$('#toWebsite').fadeIn('fast');
 	case 3:
 		$('.der').css('display', 'block');
 		$('.izq').css('display', 'none');
 	break;
 	case _lt._nSlides:
+		$('#toWebsite').fadeIn('fast');
 		$('.der').css('display', 'none');
 		$('.izq').css('display', 'block');
 	break;
 	default:
+		$('#toWebsite').fadeOut('fast');
 		$('.der').css('display', 'block');
 		$('.izq').css('display', 'block');
 		if (_lt._camino[_lt._actual] === 5) {
