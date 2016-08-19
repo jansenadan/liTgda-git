@@ -336,11 +336,13 @@ input:checked~.chulo {
 }
 .nubes-izqder:before {
 	background: url(../img/fondos/nube-izquierda.png) no-repeat left top, url(../img/fondos/nube-derecha.png) no-repeat right bottom;
-	background-size: initial;
+	/*background-size: initial;*/
+	background-size: 40vh auto;
 }
 .nubes-supinf:before {
 	background: url(../img/fondos/nube-superior.png) no-repeat right top, url(../img/fondos/nube-inferior.png) no-repeat left bottom;
-	background-size: initial;
+	/*background-size: initial;*/
+	background-size: 60vh auto;
 }
 .fPatron {
 	background-size: 50%;
@@ -1647,7 +1649,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .page.p6 .opciones {
     height: 35vh;
-    margin-bottom: 24vh;
+    /*margin-bottom: 24vh;*/
 	width: 68%;
 }
 .page.p6 .opciones .radio {
@@ -1801,6 +1803,7 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 0.52em;
     height: 100%;
     left: 0;
+    line-height: 1.1;
     position: absolute;
     top: 0;
     width: 100%;
