@@ -29,11 +29,35 @@ nav .der {
 	right: 2rem;
 }
 nav.vertical .pArr {
-	top: 1vh;
+	top: 3vh;
 }
 nav.vertical .pAba {
-	top: calc(99vh - 4.737rem);
+	top: calc(95vh - 4.737rem);
 }
+/*nav.vertical.ani .pAba {
+	animation: btnCall 1s ease-out infinite;
+	box-sizing: content-box;
+}*/
+@keyframes btnCall {
+	0% {
+		border: 3px solid #4c54fc;
+		left: calc(50vw - 0.9rem);
+		top: calc(95vh - 4.737rem);
+	}
+
+	20% {
+		border: 7px solid #B80D80;
+		left: calc(50vw - 0.9rem - 4px);
+		top: calc(95vh - 4.737rem - 4px);
+	}
+	100% {
+		border: 3px solid #4c54fc;
+		left: calc(50vw - 0.9rem);
+		top: calc(95vh - 4.737rem);
+	}
+}
+
+
 #mainWrapper, #amor {
 	
 }

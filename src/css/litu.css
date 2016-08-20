@@ -158,6 +158,31 @@ nav .izq {
 nav .der {
 	right: 0.05rem;
 }
+nav .der::before  {
+    background-color: #F7ED78;
+    /*content: "Haz clic en la flecha para avanzar a la siguiente pregunta";*/
+    content: "Haz clic en la flecha para continuar";
+    border: 0 solid #B80D80;
+    border-radius: 3rem;
+    display: block;
+    font-size: 1.3rem;
+    height: calc(4.737rem - 8px);
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 1px;
+    text-align: right;
+    top: 1px;
+    transition: all 400ms ease-out;
+    width: 0;
+    z-index: -1;
+}
+nav.avi .der::before/*, nav .der:hover::before*/ {
+    border-width: 2px;
+    padding: 0 4em 0 0.8em;
+    /*width: 27rem;*/
+    width: 20rem;
+}
 
 /*   ++++ Navegación Vertical ++++  */
 nav.vertical {
@@ -168,16 +193,63 @@ nav.vertical .pArr, nav.vertical .pAba {
 	left: calc(50vw - 0.9rem);
 }
 nav.vertical .pArr {
-	top: 0.05rem;
+	/*top: 0.05rem;*/
+	top: 3vh;
 }
 nav.vertical .pArr::after {
     transform: rotate(-90deg);
 }
 nav.vertical .pAba {
-	top: calc(100vh - 1.85rem);
+	top: calc(95vh - 1.85rem);
 }
 nav.vertical .pAba::after {
     transform: rotate(90deg);
+}
+nav .pAba::before  {
+    background-color: #F7ED78;
+    content: "Haz clic en la flecha para ver los tips";
+    border: 0 solid #B80D80;
+    border-radius: 3rem;
+    display: block;
+    font-size: 1.3rem;
+    height: calc(4.737rem - 8px);
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 1px;
+    text-align: right;
+    top: 1px;
+    transition: all 400ms ease-out;
+    width: 0;
+    z-index: -1;
+}
+nav.avi .pAba::before/*, nav .der:hover::before*/ {
+    border-width: 2px;
+    padding: 0 4em 0 0.8em;
+    /*width: 27rem;*/
+    width: 20rem;
+}
+nav.vertical.ani .pAba {
+	animation: btnCall 1s ease-out infinite;
+	box-sizing: content-box;
+}
+@keyframes btnCall {
+	0% {
+		border: 3px solid #4c54fc;
+		left: calc(50vw - 0.9rem);
+		top: calc(95vh - 1.85rem);
+	}
+
+	20% {
+		border: 7px solid #B80D80;
+		left: calc(50vw - 0.9rem - 4px);
+		top: calc(95vh - 1.85rem - 4px);
+	}
+	100% {
+		border: 3px solid #4c54fc;
+		left: calc(50vw - 0.9rem);
+		top: calc(95vh - 1.85rem);
+	}
 }
 /*   ++++ Navegación Vertical END ++++  */
 label {
@@ -2379,10 +2451,14 @@ input[type=range]:focus::-ms-fill-upper {
 	height: 700vh;
 }
 
-.p14.tipoTip .sp1.ruta1 h3 {
+.p14.tipoTip .sp1.ruta1 h3,
+.p14.tipoTip .sp1.ruta1 .ruta1,
+.p14.tipoTip .sp1.ruta2 .ruta2  {
 	display: block;
 }
-.p14.tipoTip .sp1.ruta2 h3 {
+.p14.tipoTip .sp1.ruta2 h3,
+.p14.tipoTip .sp1.ruta1 .ruta2,
+.p14.tipoTip .sp1.ruta2 .ruta1 {
 	display: none;
 }
 .p14.tipoTip .sp1.ruta2 .txt-l {
@@ -2390,6 +2466,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .p14.tipoTip .sp1.ruta2 .txt-l span {
 	margin: 3vh -3em 1vh;
+}
+.p14 .indicaFlecha, .p36 .indicaFlecha {
+	color: #B80D80;
 }
 .p14.tipoTip .sp8 h4, .p36.tipoTip .sp7 h4 {
     margin-bottom: 1.2em;
