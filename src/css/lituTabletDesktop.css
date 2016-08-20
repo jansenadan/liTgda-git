@@ -34,6 +34,10 @@ nav.vertical .pArr {
 nav.vertical .pAba {
 	top: calc(95vh - 4.737rem);
 }
+.postalSingle nav.vertical .pAba {
+	left: 60%;
+	top: 87vh;
+}
 /*nav.vertical.ani .pAba {
 	animation: btnCall 1s ease-out infinite;
 	box-sizing: content-box;
@@ -54,6 +58,24 @@ nav.vertical .pAba {
 		border: 3px solid #4c54fc;
 		left: calc(50vw - 0.9rem);
 		top: calc(95vh - 4.737rem);
+	}
+}
+@keyframes btnCallPostal {
+	0% {
+		border: 3px solid #4c54fc;
+		left: 60%;
+		top: 87vh;
+	}
+
+	20% {
+		border: 7px solid #B80D80;
+		left: calc(60% - 4px);
+		top: calc(87vh - 4px);
+	}
+	100% {
+		border: 3px solid #4c54fc;
+		left: 60%;
+		top: 87vh;
 	}
 }
 

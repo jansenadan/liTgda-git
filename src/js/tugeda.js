@@ -1022,9 +1022,32 @@ function quitaAlerta(esto) {
 	}
 }
 function avisaFlecha(flag) {
-	if(_lt._camino[_lt._actual] > 1 && /*_lt._camino[_lt._actual] != 5 &&*/ _lt._camino[_lt._actual] != 8 && _lt._camino[_lt._actual] != 9 && _lt._camino[_lt._actual] != 11 && _lt._camino[_lt._actual] != 12 && _lt._camino[_lt._actual] != 13 && /*_lt._camino[_lt._actual] != 14 &&*/ _lt._camino[_lt._actual] != 15 && /*_lt._camino[_lt._actual] != 16 &&*/ _lt._camino[_lt._actual] != 18  && _lt._camino[_lt._actual] != 19  && _lt._camino[_lt._actual] != 20  && _lt._camino[_lt._actual] != 21  && _lt._camino[_lt._actual] != 23  && _lt._camino[_lt._actual] != 24  && _lt._camino[_lt._actual] != 25 && _lt._camino[_lt._actual] != 26 && _lt._camino[_lt._actual] != 28 && _lt._camino[_lt._actual] != 29 && _lt._camino[_lt._actual] != 30 && _lt._camino[_lt._actual] != 31 && _lt._camino[_lt._actual] != 32 && _lt._camino[_lt._actual] != 34 && _lt._camino[_lt._actual] != 35 /* && _lt._camino[_lt._actual] != 36  && _lt._camino[_lt._actual] != 37*/) {
+	var actu = _lt._camino[_lt._actual];
+	if(actu > 1 && /*actu != 5 &&*/ actu != 8 && actu != 9 && actu != 11 && actu != 12 && actu != 13 && /*actu != 14 &&*/ actu != 15 && /*actu != 16 &&*/ actu != 18  && actu != 19  && actu != 20  && actu != 21  && actu != 23  && actu != 24  && actu != 25 && actu != 26 && actu != 28 && actu != 29 &&/* actu != 30 &&*/ actu != 31 && actu != 32 && actu != 34 && actu != 35 /* && actu != 36  && actu != 37*/) {
 		if (flag) {
-			$('nav#mainNav').addClass('avi');
+			if (actu === 5) {
+				loga('%%% Función avisaFlecha, Es la pag 5, actu: ', actu + ', _lt._edad: ' + _lt._edad);
+				var elem = $('.p5'),
+					inpuAge = elem.find('input.slider'),
+					inpuEd = elem.find('.radio input:checked'),
+					inpuLe = elem.find('.check input:checked'),
+					ageH = inpuAge.attr('value'),
+					eduH = inpuEd.attr('value'),
+					idiHColl = inpuLe.length;/*,
+					idiH = inpuLe.attr('value');*/
+				// if (_lt._edad != 0 && _lt._edu != 0 && _lt._edu != undefined && _lt._idi != 0 && _lt._idi != undefined ) {
+				if (_lt._edad != 0 && eduH != undefined && idiHColl != 0) {
+					$('nav#mainNav').addClass('avi');
+				}
+			} else if (actu === 30) {
+				var acuerData = $('.p30 input:checked'),
+					acuerDataColl = acuerData.length;
+				if (acuerDataColl === 5) {
+					$('nav#mainNav').addClass('avi');
+				}
+			} else {
+				$('nav#mainNav').addClass('avi');
+			}
 		}
 	} else {
 		_lt._timerAvisa = setTimeout(function(){

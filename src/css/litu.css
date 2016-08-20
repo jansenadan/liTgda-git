@@ -202,6 +202,10 @@ nav.vertical .pArr::after {
 nav.vertical .pAba {
 	top: calc(95vh - 1.85rem);
 }
+.postalSingle nav.vertical .pAba {
+	left: 60%;
+	top: 87vh;
+}
 nav.vertical .pAba::after {
     transform: rotate(90deg);
 }
@@ -233,6 +237,9 @@ nav.vertical.ani .pAba {
 	animation: btnCall 1s ease-out infinite;
 	box-sizing: content-box;
 }
+.postalSingle nav.vertical.ani .pAba {
+	animation: btnCallPostal 1s ease-out infinite;
+}
 @keyframes btnCall {
 	0% {
 		border: 3px solid #4c54fc;
@@ -249,6 +256,24 @@ nav.vertical.ani .pAba {
 		border: 3px solid #4c54fc;
 		left: calc(50vw - 0.9rem);
 		top: calc(95vh - 1.85rem);
+	}
+}
+@keyframes btnCallPostal {
+	0% {
+		border: 3px solid #4c54fc;
+		left: 60%;
+		top: 87vh;
+	}
+
+	20% {
+		border: 7px solid #B80D80;
+		left: calc(60% - 4px);
+		top: calc(87vh - 4px);
+	}
+	100% {
+		border: 3px solid #4c54fc;
+		left: 60%;
+		top: 87vh;
 	}
 }
 /*   ++++ Navegación Vertical END ++++  */
