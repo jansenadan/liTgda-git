@@ -13,8 +13,9 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/litu.css" media="screen, handheld">
-	<link rel="stylesheet" type="text/css" href="css/lituTabletDesktop.css" media="screen  and (min-width: 641px)" />
+	<link rel="stylesheet" type="text/css" href="css/litu.css" media="screen, (orientation: portrait)">
+	<link rel="stylesheet" type="text/css" href="css/lituTabletDesktop.css" media="screen  and (min-width: 641px) and (orientation: landscape), (orientation: landscape)">
+	<link rel="stylesheet" type="text/css" href="css/lituAnimacion.css" media="screen  and (min-width: 641px)">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -84,7 +85,11 @@
 				<div class="ui">
 					<h3>¿En qué lugar de Colombia?</h3>
 					<div class="match">
-						<img src="img/mapa-colombia.png" alt="¿En qué lugar de Colombia?">
+						<div class="join-mapas">
+							<img src="img/anim/mapa-colombia.png" alt="¿En qué lugar de Colombia?">
+	                        <img src="img/anim/mapa-colombia-anim.gif" alt="Mapa de Colombia animado">
+                        </div>
+						<!-- <img src="img/mapa-colombia.png" alt="¿En qué lugar de Colombia?"> -->
                         <div class="colContinental">
                         	<!--<label for="colombia"><span>Colombia Continental</span></label>-->
                             
@@ -195,7 +200,11 @@
 				<div class="ui">
 					<h3>¿En qué lugar de Providencia?</h3>
                     <div class="match">
-						<img src="img/mapa-providencia.png" alt="¿En qué lugar de Providencia?">
+                    	<div class="join-mapas">
+							<img src="img/anim/mapa-providencia.png" alt="¿En qué lugar de Providencia?">
+	                        <img src="img/anim/mapa-providencia-anim.gif" alt="Mapa de Providencia animado">
+						</div>
+						<!-- <img src="img/mapa-providencia.png" alt="¿En qué lugar de Providencia?"> -->
 						                        
                         <label for="balley"><span>Balley</span></label>
                         <label for="bottomHouse"><span>Bottom House</span></label>
@@ -236,7 +245,11 @@
 				<div class="ui">
 					<h3>¿En qué lugar de San Andrés?</h3>
 					<div class="match">
-						<img src="img/mapa-san-andres.png" alt="¿En qué lugar de San Andrés?">
+						<div class="join-mapas">
+							<img src="img/anim/mapa-san-andres.png" alt="¿En qué lugar de San Andrés?">
+	                        <img src="img/anim/mapa-san-andres-anim.gif" alt="Mapa de San Andrés animado">
+						</div>
+						<!-- <img src="img/mapa-san-andres.png" alt="¿En qué lugar de San Andrés?"> -->
                         <label for="cuevaMorgan"><span>Cueva de Morgan</span></label>
                         <label for="elCove"><span>El Cove</span></label>
 						<label for="laPiscinita"><span>La Piscinita</span></label>
@@ -416,7 +429,8 @@
 							<input type="radio" class="req" name="etnia" id="raizal" value="raizal" required>
 							<div class="impostor">
 								<label for="raizal" class="req">
-									<img src="img/sel-etnia.png" alt="Raizal">
+									<!-- <img src="img/sel-etnia.png" alt="Raizal"> -->
+									<img src="img/anim/id-raizal-solo.png" alt="Raizal">
 									<h4><span>Raizal</span></h4>
 								</label>
 							</div>
@@ -426,7 +440,8 @@
 							<input type="radio" class="req" name="etnia" id="pana" value="paña" required>
 							<div class="impostor">
 								<label for="pana" class="req">
-									<img src="img/sel-etnia.png" alt="Paña">
+									<img src="img/anim/id-pana-solo.png" alt="Paña">
+									<!-- <img src="img/sel-etnia.png" alt="Paña"> -->
 									<h4><span>Paña</span></h4>
 								</label>
 							</div>
@@ -436,7 +451,8 @@
 							<input type="radio" class="req" name="etnia" id="miti" value="Miti miti" required>
 							<div class="impostor">
 								<label for="miti" class="req">
-									<img src="img/sel-etnia.png" alt="Miti miti">
+									<img src="img/anim/id-miti-miti-solo.png" alt="Miti miti">
+									<!-- <img src="img/sel-etnia.png" alt="Miti miti"> -->
 									<h4><span>Miti miti</span></h4>
 								</label>
 							</div>
@@ -446,7 +462,8 @@
 							<input type="radio" class="req" name="etnia" id="desArab" value="Descendiente Árabe" required>
 							<div class="impostor">
 								<label for="desArab" class="req">
-									<img src="img/sel-etnia.png" alt="Descendiente Árabe">
+									<img src="img/anim/id-arabe-solo.png" alt="Descendiente Árabe">
+									<!-- <img src="img/sel-etnia.png" alt="Descendiente Árabe"> -->
 									<h4><span>Descendiente Árabe</span></h4>
 								</label>
 							</div>
@@ -456,7 +473,8 @@
 							<input type="radio" class="req" name="etnia" id="ninguno" value="Ninguno" required>
 							<div class="impostor">
 								<label for="ninguno" class="req">
-									<img src="img/sel-etnia.png" alt="Ninguno">
+									<img src="img/anim/id-ninguno-solo.png" alt="Ninguno">
+									<!-- <img src="img/sel-etnia.png" alt="Ninguno"> -->
 									<h4><span>Ninguno</span></h4>
 								</label>
 							</div>
@@ -634,6 +652,16 @@
 				</div>
 			</div>
 			<div class="page p8 nivel1 marco-amarillo fPatron">
+		      <div class="patron-anim">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+             </div>
 		      <div class="ui">
 		        <div class="container">
 		          <div class="row">
@@ -774,6 +802,16 @@
 			    </div>
 		    </div>
 			<div class="page p11 nivel1 marco-amarillo fPatron">
+		      <div class="patron-anim">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+             </div>
 		      <div class="ui">
 		        <div class="container">
 		          <div class="row">
@@ -809,6 +847,16 @@
               </div>
              <!-- TEMPORAL-->
 		    <div class="page p12 marco-amarillo fPatron">
+		      <div class="patron-anim">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+             </div>
 		      <div class="ui">
 		        <div class="container">
 		          <div class="row">
@@ -1157,6 +1205,16 @@
 		      </div>
 		    </div>
 			<div class="page p18 fPatron">
+		      <div class="patron-anim">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+             </div>
 		      <div class="ui">
 		        <div class="container">
 		          <div class="row">
@@ -1296,6 +1354,16 @@
 			    </div>
 			</div>
 			<div class="page p23 nivel1 fPatron">
+			  <div class="patron-anim">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+              </div>
 		      <div class="ui">
 		        <div class="container">
 		          <div class="row">
@@ -1487,6 +1555,16 @@
 		      </div>
 		    </div>
 		    <div class="page p29 nivel1 marco-amarillo fPatron">
+		      <div class="patron-anim">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+              </div>
 		      <div class="ui">
 		        <div class="container">
 		          <div class="row">
@@ -1684,6 +1762,16 @@
 		      </div>
 		    </div>
 		    <div class="page p32 nivel1 fPatron">
+		      <div class="patron-anim">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+              </div>
 		      <div class="ui">
 		        <div class="container">
 		          <div class="row">
@@ -1756,6 +1844,16 @@
 		      </div>
 		    </div>
 		    <div class="page p35 nivel1 marco-amarillo fPatron">
+		      <div class="patron-anim">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+              </div>
 		      <div class="ui">
 		        <div class="container">
 		          <div class="row">

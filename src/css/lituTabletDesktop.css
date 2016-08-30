@@ -1,7 +1,8 @@
 /* Esta hoja de estilos es continuación de litu.css aquí se encuentran los estilos para pantallas con un ancho mayor a 640px */
 
 html {
-	font-size: 8px;
+	/*font-size: 8px;*/
+	font-size: calc(100vw / 170);
 }
 body {
 	/*font-size: 1rem;*/
@@ -9,10 +10,60 @@ body {
 }
 a {
 }
+
+
+/*=======================
+=====ESTILOS DE TEXTO====
+========================*/
+p {
+	font-size: 2.2rem;
+	margin-bottom: 3.25vh;
+    margin-top: 3.25vh;
+}
+.txt-l {
+	font-size: 3.3rem;
+}
+.frase-cursiva {
+	font-size: 7.2rem;
+}
+
+/*Pantallas tipo Cuestionario*/
+.preg, .page .ui > h3 {
+	font-size: 3.5rem;
+}
+.preg .preg-grande {
+	font-family: 'Caveat', cursive;
+	font-size: 7.5rem;
+}
+
+
+/*Pantallas tipo Rectángulo*/
+.rect h2 {
+	font-size: 11.1rem;
+}
+.rect p,
+.bola p {
+	font-size: 2.2rem;
+}
+.rect .txt-l,
+.bola .txt-l {
+	font-size: 3.3rem;
+}
+.rect .frase-cursiva,
+.bola .frase-cursiva {
+	font-size: 7.2rem;
+	margin-top: 0;
+}
+
+
+
+
+
+
+
 nav {
 }
 nav .izq, nav .der, nav.vertical .pArr, nav.vertical .pAba {
-	background: #fff2d8;
 	border-width: 3px;
 	height: 4.737rem;
 	top: calc(50vh - 2.368rem);
@@ -28,16 +79,27 @@ nav .izq {
 nav .der {
 	right: 2rem;
 }
+nav .der::before  {
+	content: "Haz clic en la flecha para continuar";
+    font-size: 1.3rem;
+    height: calc(4.737rem - 8px);
+    right: 1px;
+    top: 1px;
+}
+nav.avi .der::before/*, nav .der:hover::before*/ {
+    width: 20rem;
+}
+
 nav.vertical .pArr {
 	top: 3vh;
 }
 nav.vertical .pAba {
 	top: calc(95vh - 4.737rem);
 }
-.postalSingle nav.vertical .pAba {
+/* .postalSingle nav.vertical .pAba {
 	left: 60%;
 	top: 87vh;
-}
+} */
 /*nav.vertical.ani .pAba {
 	animation: btnCall 1s ease-out infinite;
 	box-sizing: content-box;
@@ -58,6 +120,18 @@ nav.vertical .pAba {
 		border: 3px solid #4c54fc;
 		left: calc(50vw - 0.9rem);
 		top: calc(95vh - 4.737rem);
+	}
+}
+@keyframes btnCallAlt {
+	0% {
+		box-shadow: 0 0 0 3px #4c54fc;
+	}
+
+	20% {
+		box-shadow: 0 0 0 7px #B80D80;
+	}
+	100% {
+		box-shadow: 0 0 0 3px #4c54fc
 	}
 }
 @keyframes btnCallPostal {
@@ -87,6 +161,114 @@ nav.vertical .pAba {
 	/*padding: 5vh 5%; 
 	width: 90%;*/
 }
+.alerta.active {
+	font-size: 2.1rem;
+}
+.page > h2,
+.page > h3,
+.page .ui > h2,
+.page .ui > h3 {
+	font-size: 3.5rem;
+}
+
+
+
+/*=======================
+========PANTALLAS========
+========================*/
+.col-xs-12 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/*Pantallas tipo rect*/
+.rect {
+	margin: 0 auto;
+	/*max-width: 900px;*/
+	max-width: 112.5rem;
+	padding: 10rem;
+}
+.rect .consejo {
+	/*max-width: 300px;*/
+	max-width: 37.5rem;
+	width: 100%;
+}
+.rect .consejo:before,
+.rect .consejo:after {
+	height: 100%;
+	/*left: -90px;*/
+	left: -11.25rem;
+	top: 0;
+	/*width: 90px;*/
+	width: 11.25rem;
+}
+.rect .consejo:after { 
+	left: auto;
+	/*right: -90px;*/
+	right: -11.25rem;
+}
+
+/*Pantallas tipo globo*/
+.globo {
+	background-image: url(../img/fondos/globo-rojo.png);
+	/*background-size: 100% 100%;*/
+	/*color: #fff2d8;*/
+	height: 87vh;
+	margin: 0 1.875rem 0 auto;
+	/*max-height: 620px;*/
+	max-height: 77.5rem;
+	/*max-width: 800px;*/
+	max-width: 100rem;
+	padding: 5% 0 0;
+	position: relative;
+	width: 90%;
+}
+.globo:before,
+.globo:after {
+	/*bottom: -50px;*/
+	bottom: -6.25rem;
+	/*height: 250px;*/
+	height: 31.25rem;
+	left: 0;
+	/*width: 250px;*/
+	width: 31.25rem;
+}
+.globo p {
+	/*margin: 2.2rem auto;*/
+	/*max-width: 610px;*/
+	max-width: 76.25rem;
+}
+.globo p.reflex {
+	/*max-width: 320px;*/
+	max-width: 40rem;
+}
+
+/*Pantallas tipo bola*/
+.bola {
+	background-size: auto 100%;
+	margin: 0 auto;
+	/*max-width: 900px;*/
+	max-width: 112.5rem;
+	/*padding: 10rem;*/
+	padding: 7rem 10rem;
+	width: auto;
+}
+.bola .consejo:before,
+.bola .consejo:after {
+	/*height: 20px;*/
+	height: 2.5rem;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.bola .consejo:after { 
+	bottom: 0;
+	left: 50%;
+	/*margin-left: -125px;*/
+	margin-left: -15.625rem;
+	/*max-width: 250px;*/
+	max-width: 31.25rem;
+	top: initial;
+}
 
 
 
@@ -95,6 +277,13 @@ nav.vertical .pAba {
 +++++++++++++++++**/
 h1 {
 	font-size: 4.2rem;
+}
+h1 img {
+	height: 37vh;
+	margin: 0 -45% 8vh;
+	/*position: absolute;*/
+	/*width: 190%;*/
+	width: auto;
 }
 h1 span {
 	top: 19vh;
@@ -105,7 +294,1381 @@ h1 span {
 	font-size: 2.1rem;
 	width: 42.917%;
 }
-.invita a {
-    font-size: 4rem;
+.p1 .invita a {
+	font-size: 7rem;
     margin: 2.5em 0 0;
+}
+.p1 .invita a:hover {
+	font-size: 7rem;
+}
+
+
+
+/**++++++++++++++++
++++  Pagina 2  +++ 
++++++++++++++++++**/
+.page.p2 h2 {
+	margin-bottom:5.5vh;
+}
+.page.p2 .opciones .radio {
+	width: 50%;
+}
+.page.p2 .radio img {
+	height: 30.667vh;
+}
+label > h3 {
+	font-size: 2.1rem;
+}
+
+
+/**++++++++++++++++
++++  Pagina 3  +++ 
++++++++++++++++++**/
+.page.p3 .match {
+	width: 80%;
+}
+.page.p3  img {
+	height: 50.25vh;
+	margin: 0;
+	width: auto;
+}
+.page.p3 label[for=pais1] {
+	height: 50.25vh;
+}
+.page.p3 label[for=pais] {
+	height: 7.5vh; 
+	left: calc(50% - 24.8vh);
+	top: 19.833vh;
+	width: 4.25vh;
+}
+.page.p3 label span{
+	font-size: 2.1rem;
+}
+.page.p3 label[for=pais] span{
+	left:-15rem;
+	top: 2.2vh;
+}
+.page.p3 label[for=pais1] span {
+	left: calc(50% - 10rem);
+	top: 40vh;
+}
+
+
+/**++++++++++++++++
++++  Pagina 3_1  +++ 
++++++++++++++++++**/
+.page.p3_1 .match {
+	margin: 0 auto;
+	width: 80%;
+}
+.page.p3-1 img {
+	height: 75vh;
+	width: auto;
+}
+
+
+.page.p3_1 label .tit-dpto {
+	background-color: rgba(255,255,255,.9);
+	display: none;
+	font-size: 2.1rem;
+	left: 2.5vh;
+	padding: .1em .4em;
+	position: absolute;
+	
+}
+
+
+/*posiciones*/
+.page.p3-1 label.lActivo {
+	opacity: 1;
+}
+.page.p3-1 label[for=adz] {
+	height: 10vh;
+	left: calc(50% - 23vh);
+	top: 1.2vh;
+	width: 6vh;
+}
+.page.p3-1 label[for=prov] {
+	height: 6vh;
+	left: calc(50% - 16.5vh);
+	top: 1.2vh;
+	width: 6vh;
+}
+
+/*Dptos Colombia*/
+.page.p3-1 .colContinental label[for=amaz] {
+	left: calc(50% + 9vh);
+	right: 0vh;
+	top: 61vh;
+}
+.page.p3-1 .colContinental label[for=anti] {
+	left: calc(50% - 10.8vh);
+	top: 26vh;
+}
+.page.p3-1 .colContinental label[for=arau] {
+	top: 26.5vh;
+	left: calc(50% + 11.5vh);
+}
+.page.p3-1 .colContinental label[for=boya] {
+	left: calc(50% + 1.5vh);
+	top: 32.5vh;
+}
+.page.p3-1 .colContinental label[for=caqu] {
+	left: calc(50% - 2vh);
+	top: 50.5vh;
+}
+.page.p3-1 .colContinental label[for=casa] {
+	left: calc(50% + 9.5vh);
+	top: 30vh;
+}
+.page.p3-1 .colContinental label[for=cesa] {
+	left: calc(50% + 2vh);
+	top: 11.8vh;
+}
+.page.p3-1 .colContinental label[for=choc] {
+	left: calc(50% - 13.8vh);
+	top: 29vh;
+}
+.page.p3-1 .colContinental label[for=cord] {
+	left: calc(50% - 10vh);
+	top: 20vh;
+}
+.page.p3-1 .colContinental label[for=cund] {
+	left: calc(50% - 3vh);
+	top: 32.5vh;
+}
+.page.p3-1 .colContinental label[for=guai] {
+	left: calc(50% + 16.2vh);
+	top: 44vh;
+}
+.page.p3-1 .colContinental label[for=guav] {
+	left: calc(50% + 4.5vh);
+	top: 48vh;
+}
+.page.p3-1 .colContinental label[for=huil] {
+	left: calc(50% - 8.7vh);
+	top: 43vh;
+}
+.page.p3-1 .colContinental label[for=guaj] {
+	left: calc(50% + 5.8vh);
+	top: 5.3vh;
+}
+.page.p3-1 .colContinental label[for=magd] {
+	left: calc(50% - 2.8vh);
+	top: 8.3vh;
+}
+.page.p3-1 .colContinental label[for=meta] {
+	left: calc(50% - .5vh);
+	top: 40vh;
+}
+.page.p3-1 .colContinental label[for=nari] {
+	left: calc(50% - 20vh);
+	top: 47.8vh;
+}
+.page.p3-1 .colContinental label[for=nsan] {
+	left: calc(50% + 4vh);
+	top: 20vh;
+}
+.page.p3-1 .colContinental label[for=putu] {
+	left: calc(50% - 9vh);
+	top: 53vh;
+}
+.page.p3-1 .colContinental label[for=sant] {
+	left: calc(50% + 0vh);
+	top: 23.3vh;
+}
+.page.p3-1 .colContinental label[for=sucr] {
+	left: calc(50% - 5.3vh);
+	top: 17.5vh;
+}
+.page.p3-1 .colContinental label[for=vaup] {
+	left: calc(50% + 12.5vh);
+	top: 52vh;
+}
+.page.p3-1 .colContinental label[for=vich] {
+	left: calc(50% + 16.2vh);
+	top: 36vh;
+}
+.page.p3-1 .colContinental label[for=bogo] {
+	left: calc(50% - 3vh);
+	top: 37vh;
+}
+.page.p3-1 .colContinental label[for=atla] {
+	left: calc(50% - 5.3vh);
+	top: 10.2vh;
+}
+.page.p3-1 .colContinental label[for=boli] {
+	left: calc(50% - 5.3vh);
+	top: 13vh;
+}
+.page.p3-1 .colContinental label[for=cald] {
+	left: calc(50% - 7vh);
+	top: 32vh;
+}
+.page.p3-1 .colContinental label[for=risa] {
+	left: calc(50% - 10.8vh);
+	top: 32vh;
+}
+.page.p3-1 .colContinental label[for=quin] {
+	left: calc(50% - 9.5vh);
+	top: 35.5vh;
+}
+.page.p3-1 .colContinental label[for=toli] {
+	left: calc(50% - 8.7vh);
+	top: 39vh;
+}
+.page.p3-1 .colContinental label[for=cauc] {
+	left: calc(50% - 15vh);
+	top: 44.2vh;
+}
+.page.p3-1 .colContinental label[for=vall] {
+	left: calc(50% - 15vh);
+	top: 39.2vh;
+}
+
+
+
+
+/**+++++++++++++++++++
++++  Pagina 3-1-1  +++ 
++++++++++++++++++**/
+.page.p3-1-1 .match {
+	margin: 0 auto;
+	width: 80%;
+}
+.page.p3-1-1 label {
+	position: absolute;
+}
+
+.page.p3-1-1  img {
+	height: 80vh;
+	width: auto;
+}
+
+/*posiciones*/
+.page.p3-1-1 label[for=balley] {
+	height: 17vh;
+	left: calc(50% + 1vh);
+	top: 30vh;
+	width: 13vh;
+}
+.page.p3-1-1 label[for=bottomHouse] {
+	height: 10vh;
+	left: calc(50% - 12vh);
+	width: 13vh;
+	top: 48vh;
+}
+.page.p3-1-1 label[for=camp] {
+	height: 6vh;
+    left: calc(50% - 20vh);
+    top: 29.833vh;
+    transform: rotate(-12deg);
+    width: 8.25vh;
+}
+.page.p3-1-1 label[for=freshBay] {
+	height: 10vh;
+	left: calc(50% - 26vh);
+	top: 46vh;
+	width: 13vh;
+}
+.page.p3-1-1 label[for=lazyHill] {
+	height: 9vh;
+	left: calc(50% - 25vh);
+	top: 37vh;
+	width: 13vh;
+}
+.page.p3-1-1 label[for=lazyHill] span{
+	bottom: 1vh;
+	right: 2vh;
+}
+.page.p3-1-1 label[for=mountain] {
+	height: 12vh;
+	left: calc(50% + .5vh);
+	top: 17vh;
+	width: 10vh;
+}
+.page.p3-1-1 label[for=mountain] span {
+	right: 1.5vh;
+	top: 5.5vh;
+}
+.page.p3-1-1 label[for=oldTown] {
+	height: 10vh;
+    left: calc(50% - 10.85vh);
+    top: 29.833vh;
+    transform: rotate(-12deg);
+    width: 9.25vh;
+}
+.page.p3-1-1 label[for=oldTown] span {
+	bottom: 0.8vh;
+}
+.page.p3-1-1 label[for=rockyPoint] {
+	height: 11vh;
+	left: calc(50% + 1.1vh);
+	top: 48vh;
+	width: 9vh;
+}
+.page.p3-1-1 label[for=staCat] {
+	top: 9.333vh;
+	left: calc(50% - 13.55vh);
+	width: 10vh;
+	height: 10vh;
+}
+.page.p3-1-1 label[for=smoothWater] {
+    height: 6vh;
+    left: calc(50% - 4.1vh);
+    top: 59vh;
+    width: 9vh;
+}
+.page.p3-1-1 label[for=southwestBay] {
+	height: 10vh;
+	left: calc(50% - 26vh);
+	top: 57vh;
+	width: 13vh;
+}
+.page.p3-1-1 label[for=town] {
+	height: 12vh;
+	left: calc(50% - 4.5vh);
+	top: 17vh;
+	width: 2vh;
+}
+
+/**+++++++++++++++++++
++++  Pagina 3-1-2  +++ 
++++++++++++++++++**/
+.page.p3-1-2 .match {
+	margin: 0 auto;
+	width: 80%;
+}
+
+
+
+/**++++++++++++++++
++++  Pagina 4  +++ 
++++++++++++++++++**/
+.page.p4 h3 {
+	margin-bottom: 13.5vh;
+}
+.page.p4 .opciones {
+	width: 65%;
+}
+.page.p4 .opciones .radio {
+	width: 50%;
+}
+.page.p4 .radio img {
+	height: 32.083vh;
+	width: auto;
+}
+label > h4 {
+	font-size: 2.1rem;
+	margin-bottom: 0;
+	margin-top: 6.167vh;
+}
+
+
+
+/**++++++++++++++++
++++  Pagina 5  +++ 
++++++++++++++++++**/
+.p5 > .iu {
+	display: table-cell;
+}
+nav.sidebar .der {
+	right: 24%;
+}
+.p5 .ui > h3 {
+	margin-bottom: 15vh;
+	margin-top: 0;
+}
+.p5 .mayor {
+	float: left;
+	height: 100%;
+	width: 78.646%;
+}
+.p5 .menor {
+	float: left;
+	height: 100%;
+	width: 21.354%;
+}
+.p5 .mayor > .ui, .p5 .menor > .ui {
+	height: 100vh;
+}
+.p5 .menor h4 {
+	font-size: 2.5rem;
+}
+.p5 .birrete {
+    left: 46%;
+    top: calc(50% - 26vh);
+}
+/*  ...    */
+.p5 .menor h4::after {
+	border-bottom: 1px solid #fcf573;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+.p5 .menor h4:first-child {
+	margin-top: 4em;
+}
+.p5 .opciones {
+	margin: 0 auto;
+}
+.p5 .opciones:not(.checkGrup) {
+	margin: 2em auto 6em;
+}
+.p5 .menor .radio {
+	color: #4c54fc;
+	width: 47.272%;
+}
+.p5 .menor .radio:first-child,
+.p5 .menor .radio:nth-child(3),
+.p5 .menor .radio:nth-child(5) {
+	margin-right: 5.4%;
+}
+.p5 .menor .radio:nth-child(2),
+.p5 .menor .radio:nth-child(4) {
+	margin-right: 0;
+}
+.p5 .menor .radio .impostor {
+    padding: 7% 4.9%;
+}
+.p5 .menor .radio input:checked ~ .impostor {
+	background: transparent url("../img/elem/btn-idio.png") center/100% 100% no-repeat;
+}
+/*.p5 .menor .radio input:checked ~ label {
+	background: none;
+}*/
+.p5 .menor .radio label {
+	background-color: #fcf474;
+	display: block;
+    min-height: 3.5rem;
+    width: 99.1%;
+}
+.p5 .menor .radio p,
+.p5 .menor .check p {
+	font-size: 1.875rem;
+    margin: 0;
+    padding: 0.7em 0;
+    width: 100%;
+}
+
+
+
+
+
+
+/*  ...    */
+
+
+.p5 .mayor .ui > p {
+	font-size: 7.75rem;
+}
+
+.p5 .menor h4::after {
+	border-bottom: 1px solid #fcf573;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+.p5 .menor h4:first-child {
+	margin-top: 4em;
+}
+
+/* ...   */
+
+
+input[type=range] {
+  width: 81.7%; /* Specific width is required for Firefox. */
+}
+
+/***++++    THUMB     ++++****/
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  height: 6.3vh;
+  width: 6.3vh;
+}
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 6.3vh;
+  width: 6.3vh;
+}
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  height: 6.3vh;
+  width: 6.3vh;
+}
+
+
+
+/**++++++++++++++++
++++  Pagina 6  +++ 
++++++++++++++++++**/
+
+.page.p6 .opciones .radio,
+.page.p6 .opciones .radio:last-child {
+	/*overflow: hidden;*/
+	width: 20%;
+}
+.page.p6 .impostor {
+	margin: 0 auto;
+}
+.page.p6 .radio:nth-child(1) .impostor,
+.page.p6 .radio:nth-child(3) .impostor,
+.page.p6 .radio:nth-child(5) .impostor {
+	margin-top: 12vh;
+}
+.page.p6 .radio:nth-child(1) .chulo,
+.page.p6 .radio:nth-child(3) .chulo,
+.page.p6 .radio:nth-child(5) .chulo {
+	top: 11vh;
+}
+
+
+/**++++++++++++++++
++++  Pagina 7  +++ 
++++++++++++++++++**/
+.p7 .pre-preg, .p7 .ui h4,
+.p10 .pre-preg, .p10 .ui h4 {
+	font-size: 2.5rem;
+	margin: 0;
+}
+/*.p7.pre-preg,
+.p10.pre-preg {
+	font-size: 3.5rem;
+	margin: 0;
+}*/
+.p7 p.preg-indicacion {
+	font-size: 2.2rem;
+}
+.p7 p.preg-indicacion::after,
+.p10 p.preg-indicacion::after {
+	content: none;
+}
+
+.page.p7 .opciones {
+    height: 35vh;
+    margin-bottom: 24vh;
+}
+.page.p7 .opciones .check {
+	/*overflow: hidden;*/
+	width: 16.666%;
+}
+.p7 .nivel7 {
+	margin-left: 8.33%;
+}
+.page.p7 .opciones .check.nivel0 {
+	bottom: -23vh;
+	left: calc(50% - 8.333%);
+	margin-top: 0;
+	position: absolute;
+}
+.page.p7 .nivel0 .impostor {
+    height: 1.5em;	
+}
+
+.p7 .opciones label .def {
+    background: url("../img/marco-sel-situa-def.png") center top/contain no-repeat;
+    display: none;
+    font-size: 0.52em;
+    height: 100%;
+    left: 0;
+    line-height: 1.1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.p7 .opciones label .def div {
+    /*background: #fcf474;*/
+    display: table-cell;
+    height: 16.667vh;
+    padding: 0 1em;
+    vertical-align: middle;
+}
+.p7 .opciones p .es {
+    display: block;
+    margin: 0;
+}
+.p7 .opciones p .en {
+	display: none;
+	margin: 0;
+}
+.p7 .opciones .check:hover label .def,
+.p7 .opciones .check:hover p .en {
+	display: block;
+}
+
+
+/**++++++++++++++++
++++  Pagina 8  +++ 
++++++++++++++++++**/
+.p8 .rect p {
+	/*margin: 1rem auto;*/
+	/*max-width: 450px;*/
+	max-width: 56.25rem;
+}
+.p8 .rect .txt-l {
+	/*margin-top: 32px;*/
+	margin-top: 4rem;
+}
+.p8 .rect h2:after{
+	/*height: 20px;*/
+	height: 2.5rem;
+}
+
+/**++++++++++++++++
++++  Pagina 9  +++ 
++++++++++++++++++**/
+
+
+.p9 .bola {
+	background-image: url(../img/fondos/bola-amarillo.png);
+	/*padding*/
+}
+.p9 p {
+	/*margin: 1rem auto;*/
+	/*max-width: 450px;*/
+	max-width: 56.25rem;
+}
+.p9 .cifra {
+	margin: 3.2rem auto 0;
+	/*max-width: 190px;*/
+	max-width: 23.75rem;
+}
+.p9 .cifra .frase-cursiva {
+	/*margin: 1em auto 1rem;*/
+	margin: 0.5em auto 1rem;
+}
+.p9 .cifra p:nth-child(2) {
+	margin: 1rem auto;
+}
+.p9 .cifra p:nth-child(3) {
+	font-size: 6rem;
+	margin: 1rem auto;
+}
+.p9 .cifra:before,
+.p9 .cifra:after {
+	height: 100%;
+	left: -11.25rem;
+	top: 0;
+	width: 11.25rem;
+}
+.p9 .cifra:after { 
+	left: auto;
+	right: -11.25rem;
+}
+.p9 .consejo {
+	margin: 2rem auto 0 ;
+	max-width:50rem;
+	padding: 1.5rem 0;
+}
+
+/**++++++++++++++++
++++  Pagina 10  +++ 
++++++++++++++++++**/
+.page.p10 .opciones {
+    height: 35vh;
+    margin-bottom: 14vh;
+	/*margin-top: 10vh;*/
+	margin-top: 6vh;
+	/*width: 68%;*/
+	width: 78%;
+}
+.page.p10 .opciones .check {
+	/*overflow: hidden;*/
+	width: 14.285%;
+}
+.p10 .check:nth-child(even) {
+    margin-top: 12vh;
+}
+.page.p10 .opciones .check.nivel0 {
+	bottom: -8vh;
+	left: calc(50% - 8.333%);
+	margin-top: 0;
+	position: absolute;
+}
+
+.page.p10 .nivel0 .impostor {
+    height: 2em;
+	padding-bottom: 0;
+	padding-top: .2em;
+}
+
+.page.p10 .nivel0 .impostor {
+	background: url("../img/marco-sel-situa-ninguna.png") center top/100% 100% no-repeat;
+	height: 0.8em;
+	padding-bottom: 0;
+	padding-top: 0.2em;
+}
+
+
+
+
+/**++++++++++++++++
++++  Pagina 11  +++ 
++++++++++++++++++**/
+/*Pantalla 11*/
+.p11 .rect h2:after{
+	/*height: 20px;*/
+	height: 2.5rem;
+}
+.p11 .rect .consejo {
+	margin-bottom: auto;
+	margin-top: -1rem;
+	max-width: 25rem;
+	padding: 1rem 0;
+}
+
+
+/**++++++++++++++++
++++  Pagina 12  +++ 
++++++++++++++++++**/
+/*Pantalla 12*/
+
+
+/*Pantalla 15 y 25*/
+.p15 p, .p25 p {
+    margin: 3.25vh auto;
+	width: auto;
+}
+.p15 .nube,
+.p25 .nube {
+	color: #fff2d8;
+	margin: 0 auto;
+	/*max-width: 320px;*/
+	/*max-width: 420px;*/
+	max-width: 52.5rem;
+	padding: 7rem;
+}
+.p25 .nube {
+	padding: 8.75rem;
+}
+.p25 .nube .txt-l {
+	font-size: 3.3rem;
+    width: auto;
+}
+.p15 .col-xs-12 .col-xs-5,
+.p15 .col-xs-12 .col-xs-2,
+.p25 .col-xs-12 .col-xs-5,
+.p25 .col-xs-12 .col-xs-2 {
+	float: left;
+	width: 41.66666667%;
+}
+.p15 .col-xs-12 .col-xs-2,
+.p25 .col-xs-12 .col-xs-2 {
+	background: none;
+	height: auto;
+	width: 16.66666667%;
+}
+.p15 .col-xs-12 .col-xs-2 img,
+.p25 .col-xs-12 .col-xs-2 img {
+	display: block;
+}
+
+
+/**++++++++++++++++
++++  Pagina 13  +++ 
++++++++++++++++++**/
+/*Pantalla 13*/
+.p13,
+.p19,
+.p20,
+.p21 {
+	/*background-color: #fcf474;*/
+	background-image: url(../img/fondos/corazon-peque.png);
+}
+
+.p13.nivel1 .globo,
+.p13.nivel3 .globo {
+	background-image: url(../img/fondos/globo-azul.png);
+}
+.p13.nivel2 .globo {
+	background-image: url(../img/fondos/globo-rojo.png);
+}
+.p13 img.center-block {
+	width: auto;
+}
+
+
+/**++++++++++++++++
++++  Pagina 14 y 36  +++ 
++++++++++++++++++**/
+
+.p14.tipoTip .sp1.ruta2 .txt-l {
+	max-width: 16em;
+}
+.p14.tipoTip .sp1.ruta2 .txt-l span {
+	margin: 3vh -3em 1vh;
+}
+.p14.tipoTip .sp8 h4, .p36.tipoTip .sp7 h4 {
+    margin-bottom: 1.2em;
+}
+.p36 .sp5 p, .p36 .sp6 p {
+	font-size: 2.2rem;
+}
+
+.tipoTip .sp1 img {
+	height: 30vh;
+	margin-bottom: 3vh;
+}
+.tipoTip .sp1 h3,
+.tipoTip .finTip h3 {
+	font-size: 4.5rem;
+	margin: 0;
+}
+.tipoTip p {
+	margin: 5vh auto;
+	max-width: 34em;
+}
+.tipoTip .sp1 p span.frase-cursiva {
+	font-size: 5rem;
+	margin: 3vh 0 1vh;
+}
+/*tips*/
+.tipoTip .col-xs-12 {
+	z-index: 0;
+}
+.tipoTip .tip h4 {
+	font-size: 7.8rem;
+}
+.tipoTip .tip .frase-cursiva {
+	font-size: 5rem;
+}
+.tipoTip .imgTip {
+	height: 35vh;
+	z-index: 1;
+}
+.tipoTip .imgTipIzq {
+	display: block;
+	left: 5%;
+	top: 8vh;
+}
+.tipoTip .imgTipDer {
+	bottom: 15vh;
+	right: 7%;
+}
+
+
+/**++++++++++++++++
++++  Pagina 16 y 37  +++ 
++++++++++++++++++**/
+.p16 h3,
+.p37 h3 {
+	font-size: 3.5rem;
+}
+.p16 .txt-l,
+.p37 .txt-l {
+	font-size: 3.3rem;
+}
+.p16 .sp1 .postalMini,
+.p37 .sp1 .postalMini {
+	float: left;
+	margin: 0 2.5%;
+	width: 45%;
+}
+.p16 .sp2 .sharePostal:after,
+.p37 .sp2 .sharePostal:after {
+	border-radius: 1rem;
+	/*height: 40px;*/
+	height: 5rem;
+	position: absolute;
+	/*width: 40px;*/
+	width: 5rem;
+}
+.p16 .sp2 .postalMini,
+.p37 .sp2 .postalMini {
+	height: 25vh;
+	max-height: 240px;
+}
+
+
+/**+++++++++++++++++++++++++
++++  Pagina 19, 20 y 21  +++ 
++++++++++++++++++++++++++**/
+/*Pantalla 19,20 y 21*/
+.p19 .col-xs-3,
+.p20 .col-xs-3,
+.p21 .col-xs-3 {
+	width: 25%
+}
+.p19 .col-xs-9,
+.p20 .col-xs-9,
+.p21 .col-xs-9 {
+	width: 75%;
+}
+.p19 .col-xs-3 .txt-l,
+.p20 .col-xs-3 .txt-l,
+.p21 .col-xs-3 .txt-l {
+	font-size: 3.3rem;
+}
+.p19 .col-xs-3 .frase-cursiva,
+.p20 .col-xs-3 .frase-cursiva,
+.p21 .col-xs-3 .frase-cursiva {
+    font-size: 7.2rem;
+    margin-bottom: 3.25vh;
+	margin-top: 0;
+}
+.p19 .col-xs-3 .frase-cursiva:before,
+.p19 .col-xs-3 .frase-cursiva:after,
+.p20 .col-xs-3 .frase-cursiva:before,
+.p20 .col-xs-3 .frase-cursiva:after,
+.p21 .col-xs-3 .frase-cursiva:before,
+.p21 .col-xs-3 .frase-cursiva:after {
+	height: 100%;
+	/*left: -20px;*/
+	left: -2.5rem;
+	position: absolute;
+	/*top: 10px;*/
+	top: 1.25rem;
+	/*width: 90px;*/
+	width: 11.25rem;
+}
+.p19 .col-xs-3 .frase-cursiva:after,
+.p20 .col-xs-3 .frase-cursiva:after,
+.p21 .col-xs-3 .frase-cursiva:after { 
+	background-image: url(../img/elem/rect-consejo-der-azul.png); 
+	left: initial;
+	right: -2.5rem;
+}
+
+.p19 .globo,
+.p21 .globo {
+	background-image: url(../img/fondos/globo-azul.png);
+}
+.p19 .globo,
+.p20 .globo,
+.p21 .globo {
+	padding-top: 8%;
+}
+.p19 .globo:before,
+.p19 .globo:after,
+.p20 .globo:before,
+.p20 .globo:after,
+.p21 .globo:before,
+.p21 .globo:after {
+	background-image: url(../img/elem/corazon-feliz.png);
+}
+.p19 .globo p,
+.p20 .globo p,
+.p21 .globo p {
+	margin: 2.2rem auto;
+}
+
+/**++++++++++++++++
++++  Pagina 22  +++ 
++++++++++++++++++**/
+.p22.nubes-supinf:before {
+	background-size: 60vh auto;
+}
+.p22 p:first-child {
+	margin-top: 3.25vh;
+}
+.p22 img.center-block {
+	width: auto;
+}
+.page.p22 h3 {
+	font-size: 3.5rem;
+	margin-bottom: 5.167vh;
+	margin-top: 3vh;
+}
+.page.p22 .opciones {
+    height: 31vh;
+    /*margin-bottom: 24vh;*/
+    width: 68%;
+}
+.page.p22 .opciones .radio, .page.p22 .opciones .radio:last-of-type {
+	margin-bottom: 0;
+	/*overflow: hidden;*/
+	width: 33.333333%;
+}
+
+
+/**++++++++++++++++
++++  Pagina 23  +++ 
++++++++++++++++++**/
+/*Pantalla 23*/
+.p23 .rect .txt-l {
+	font-size: 2.5rem;
+}
+.p23 .rect .txt-l:first-child {
+	margin-bottom: 1em;
+}
+.p23 .rect h2 {
+	font-size: 9rem;
+}
+.p23.nivel2 .rect .consejo:before,
+.p23.nivel2 .rect .consejo:after,
+.p23.nivel3 .rect .consejo:before,
+.p23.nivel3 .rect .consejo:after {
+	top: 2rem;
+	left: -5rem;
+}
+
+
+/**++++++++++++++++
++++  Pagina 24  +++ 
++++++++++++++++++**/
+.p24 .bola {
+	background-image: url(../img/fondos/bola-azul.png);
+}
+.p24 p {
+	margin: 1rem auto;
+	/*max-width: 450px;*/
+	max-width: 56.25rem;
+}
+.p24 .cifra   {
+	margin: 3.2rem auto 0;
+	max-width: 200px;
+	padding-bottom: 2rem;
+	position:relative;
+	width: 100%;
+}
+.p24 .cifra .frase-cursiva {
+	margin: 0 auto 1rem;
+}
+.p24 .cifra p:nth-child(2) {
+    margin: 1rem auto;
+}
+.p24 .cifra p:nth-child(3) {
+	font-size: 5rem;
+}
+.p24 .cifra:before,
+.p24 .cifra:after {
+	/*left: -90px;*/
+	left: -11.25rem;
+	/*width: 90px;*/
+	width: 11.25rem;
+}
+.p24 .cifra:after { 
+	/*right: -90px;*/
+	right: -11.25rem;
+}
+.p24 .txt-l:nth-of-type(2) {
+	font-size: 3.3rem;
+}
+.p24 .consejo {
+	/*margin: 2rem auto 0 ;*/
+	max-width:50rem;
+	padding: 3rem 0;
+}
+.p24 .consejo .frase-cursiva {
+	margin-top: 0;
+}
+
+
+/**++++++++++++++++
++++  Pagina 26  +++ 
++++++++++++++++++**/
+/*Pantalla 26*/
+.p26 h3 {
+	font-size: 4.5rem;
+	max-width: 15em;
+}
+.p26 p {
+    max-width: 23em;
+}
+.p26 .txt-l {
+	font-size: 3.3rem;
+	max-width: 25em;
+}
+.p26 img {
+	width: auto;
+	height: 40vh;
+}
+.p26 .frase-cursiva {
+	margin: 3.25vh auto;
+}
+
+/**++++++++++++++++
++++  Pagina 27  +++ 
++++++++++++++++++**/
+.p27.nubes-supinf:before {
+	background-size: 60vh auto;
+}
+.page.p27 h3 {
+	margin-bottom: 6vh;
+	margin-top: 0;
+}
+.page.p27 .opciones {
+    /*height: 35vh;*/
+    height: initial;
+   	/*width: 68%;*/
+   	width: 78%;
+}
+.page.p27 .opciones .check {
+	margin-bottom: 0;
+	/*overflow: hidden;*/
+	width: 25%;
+}
+
+/**++++++++++++++++
++++  Pagina 29  +++ 
++++++++++++++++++**/
+/*Pantalla 29*/
+.p29.marco-amarillo::before {
+	content: "";
+}
+.p29 p {
+	font-size: 2rem;
+	margin-top: 2.3vh;
+	margin-bottom: 2.3vh;
+}
+.p29 .txt-l, .p29 p:last-of-type {
+	font-size: 2.8rem;
+}
+
+/**++++++++++++++++
++++  Pagina 30  +++ 
++++++++++++++++++**/
+.p30.nubes-supinf:before {
+	background-size: 60vh auto;
+}
+.page.p30 h3 {
+	margin-bottom: 3vh;
+}
+.page.p30 .opciones {
+	margin-bottom: 6vh;
+	width: 68%;
+}
+.page.p30 .opciones > div,
+.page.p30 .opciones > div.multi5 {
+	height: auto;
+	width: 20%;
+}
+.page.p30 .impostor {
+	/*background: url("../img/marco-sel-situa.png") center top/contain no-repeat;*/
+	/*margin: 0 auto;*/
+	/*overflow: hidden;*/
+	padding-bottom: 1vh;
+	/*position: relative;*/
+	width: 16vh;
+}
+.page.p30 .impostor p {
+	/*background: url("../img/fondos/btn-fondo-lila.png") top/100% 100% no-repeat;*/
+	/*color: #fff2d8;*/
+	font-size: 2rem;
+	/*margin: 1vh 0 0 ;*/
+	/*padding: 5%;*/
+}
+.page.p30 .multiRadio {
+	margin: 0 auto;
+}
+.page.p30 .multiRadio p {
+    font-size: .9em;
+    margin-bottom: 0;
+    margin-top: 1.25vh;
+    padding-left: 2.833vh;
+    text-align: left;
+}
+
+
+/**++++++++++++++++
++++  Pagina 33  +++ 
++++++++++++++++++**/
+/*Pantalla 33*/
+.p33 h3 {
+	width: auto;
+}
+.p33 img {
+	/*margin-bottom: 48px;*/
+	margin-bottom: 6rem;
+	/*margin-top: 48px;*/
+	margin-top: 6rem;
+	/*max-width: 600px;*/
+	max-width: 75rem;
+}
+.p33 .opciones {
+	width: 30%;
+}
+
+.btn-litu {
+	display: inline;
+	font-size: 2.1rem;
+	/*margin: 8px 20px;*/
+	margin: 1rem 2.5rem;
+	/*padding: 15px 60px;*/
+	padding: 1.875rem 7.5rem;
+}
+.p33 .impostor.btn-litu {
+    display: block;
+    /*height: 2.2em;*/
+	/*margin: 0;*/
+    /*padding: 0;*/
+    width: 70%;
+}
+.p33 .radio:last-child .impostor.btn-litu {
+	margin-left: 29%;
+}
+
+/**++++++++++++++++
++++  Pagina 35  +++ 
++++++++++++++++++**/
+/*Pantalla 35*/
+.p35::before {
+	content: "";
+}
+
+/**+++++++++++++++++++++++++++++++++++++++++
++++  Paginas 28, 31 y 34 - Bolas Ruta 3  +++ 
++++++++++++++++++++++++++++++++++++++++++**/
+/*Pantalla 28, 31 y 34 - Bolas Ruta 3*/
+.p28 .bola,
+.p31 .bola,
+.p34 .bola {
+	background-image: url(../img/fondos/bola-azul.png);
+}
+.p28 p,
+.p31 p,
+.p34 p {
+	/*margin: 1rem auto;*/
+	/*max-width: 450px;*/
+	max-width: 56.25rem;
+}
+.p28 .cifra,
+.p31 .cifra,
+.p34 .cifra   {
+	margin: 3.2rem auto 0;
+	/*max-width: 200px;*/
+	max-width: 25rem;
+	padding-bottom: 2rem;
+	position:relative;
+	width: 100%;
+}
+.p28 .cifra .frase-cursiva,
+.p31 .cifra .frase-cursiva,
+.p34 .cifra .frase-cursiva {
+	margin: 0 auto 1rem;
+}
+.p28 .cifra p:nth-child(2),
+.p31 .cifra p:nth-child(2),
+.p34 .cifra p:nth-child(2) {
+   margin: 1rem auto;
+}
+.p28 .cifra p:nth-child(3),
+.p31 .cifra p:nth-child(3),
+.p34 .cifra p:nth-child(3) {
+	font-size: 5rem;
+}
+
+.p28 .cifra:before,
+.p28 .cifra:after,
+.p31 .cifra:before,
+.p31 .cifra:after,
+.p34 .cifra:before,
+.p34 .cifra:after {
+	/*left: -90px;*/
+	left: -11.25rem;
+	/*width: 90px;*/
+	width: 11.25rem;
+}
+.p28 .cifra:after,
+.p31 .cifra:after,
+.p34 .cifra:after { 
+	left: auto;
+	/*right: -90px;*/
+	right: -11.25rem;
+}
+.p28 .txt-l:nth-of-type(2),
+.p31 .txt-l:nth-of-type(2),
+.p34 .txt-l:nth-of-type(2) {
+	font-size: 3.3rem;
+}
+.p28 .consejo,
+.p31 .consejo,
+.p34 .consejo {
+	max-width:50rem;
+	padding: 3rem 0;
+}
+.p28 .txt-s {
+	font-size: 1.6rem;
+}
+
+
+/**++++++++++++++++++++++++
++++  Paginas 17 y 38    +++ 
+++++++++++++++++++++++++**/
+/*p17 y p38*/
+.p17 .preg, .p38 .preg {
+	margin-bottom: 12vh;
+}
+.p17 .col-sm-4, .p38 .col-sm-4 {
+	width: 33.33333333%;
+}
+.p17 .col-sm-4:last-child, .p38 .col-sm-4:last-child {
+	margin: 0;
+}
+.linkCierre {
+	/*max-width: 300px;*/
+	max-width: 37.5rem;
+}
+.linkCierre p {
+	font-size: 2.2rem;
+	margin: 0 auto;
+	/*min-height: 90px;*/
+	min-height: 11.25rem;
+	/*padding: 18px;*/
+	padding: 2.25rem;
+	
+}
+/**++++++++++++++++++++++++
++++  Paginas TEmp ruletas +++ 
+++++++++++++++++++++++++**/
+.page.ruleta h3 {
+	font-size: 3.5rem;
+}
+.page.ruleta img {
+	height: 50vh;
+}
+
+
+
+/*Postales*/
+.postal {
+	/*height: 70vh;*/
+	height: 56vh;
+	width: auto;
+}
+
+/**+++++++++++++++++++++++++++++++++++
++++  Link de regreso a Livintugeda +++ 
++++++++++++++++++++++++++++++++++++**/
+nav#toWebsite {
+	left: 0;
+	top: 0;
+}
+nav#toWebsite a {
+	display: inline-block;
+	margin: 12px;
+	text-decoration: none!important;
+}
+nav#toWebsite a .iCasita {
+	display: block;
+	background-color:#241c66;
+	border-radius: 50%;
+	font-size: 3.2rem;
+	color: #fcf573;
+	margin: 0 auto;
+	width: 5rem;
+	height: 5rem;
+	padding-left: 1rem;
+	padding-top: .8rem;
+	-moz-transition: color 500ms ease;
+	-webkit-transition: color 500ms ease;
+	transition: color 500ms ease;
+}
+nav#toWebsite a .leyenda{
+	color: #241c66;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	line-height: 3;
+	font-weight: 700;
+}
+nav#toWebsite a:hover .iCasita {
+	color: #7dedb5;
 }

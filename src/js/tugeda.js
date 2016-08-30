@@ -690,9 +690,9 @@ function move(nuevoCont,vel) {
 		speed = _lt._vel;
 	}
 	elSale.animate({'left': distancia}, speed, function() {
-		elSale.css('display', 'none');
+		elSale.removeClass('active').css('display', 'none');
 	})
-	elEntra.css('display', 'block').animate({'left': 0}, speed, function() {
+	elEntra.css('display', 'block').addClass('active').animate({'left': 0}, speed, function() {
 		_lt._actual = nuevoCont;
 		_lt._pasa = 0;
 		_lt._avisa = 0;
@@ -713,7 +713,12 @@ function displayFlechas() {
 	switch(_lt._actual) {
 	case 1:
 		$('#toWebsite').fadeIn('fast');
+		$('.der').css('display', 'block');
+		$('.izq').css('display', 'none');
+	break;
+	case 2:
 	case 3:
+		$('#toWebsite').fadeOut('fast');
 		$('.der').css('display', 'block');
 		$('.izq').css('display', 'none');
 	break;
@@ -927,15 +932,18 @@ function edad(ed) {
 		} else {
 			contEdad.addClass('dob');
 		}
-		humElem.addClass('peq').removeClass('jov adu abu');
-	} else if (years < 40) {
-		humElem.addClass('jov').removeClass('peq adu abu');
+		humElem.addClass('peq').removeClass('jov pro adu abu');
+	} else if (years < 31) {
+		humElem.addClass('jov').removeClass('peq pro adu abu');
 		contEdad.addClass('dob');
-	} else if (years < 70) {
-		humElem.addClass('adu').removeClass('peq jov abu');
+	} else if (years < 51) {
+		humElem.addClass('pro').removeClass('peq jov adu abu');
+		contEdad.addClass('dob');
+	} else if (years < 71) {
+		humElem.addClass('adu').removeClass('peq jov pro abu');
 		contEdad.addClass('dob');
 	} else {
-		humElem.addClass('abu').removeClass('peq jov adu');
+		humElem.addClass('abu').removeClass('peq jov pro adu');
 		contEdad.addClass('dob');
 	}
 }
@@ -1124,7 +1132,7 @@ function mide() {
 
 
 function loga(txt, valor) {
-	// console.log(txt, valor);
+	console.log(txt, valor);
 }
 
 

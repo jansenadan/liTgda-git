@@ -1,0 +1,293 @@
+@charset "UTF-8";
+@-webkit-keyframes sm1 {
+    100% { background-position: -100%; }
+}
+@keyframes sm1 {
+    100% { background-position: -100%; }
+}
+@-webkit-keyframes sm2 {
+    100% { background-position: 10% 100% }
+}
+@keyframes sm2 {
+    100% { background-position: 10% 100% }
+}
+@-webkit-keyframes giraElem {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+@keyframes giraElem {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}
+@-webkit-keyframes birrete {
+    0% { transform:rotate(-5deg); }
+    50% { transform:rotate(20deg); }
+    100% { transform:rotate(-5deg); }
+}
+@keyframes birrete {
+    0% { transform:rotate(-5deg); }
+    50% { transform:rotate(20deg); }
+    100% { transform:rotate(-5deg); }
+}
+.birrete { 
+animation: birrete 2s steps(6) infinite;
+}
+.page.p1,
+.page.p2,
+.page.p3,
+.page.p3-1,
+.page.p3-1-1,
+.page.p3-1-2,
+.page.pTemp1,
+.page.pTemp2,
+.page.p9,
+.page.p14 .singlePage,
+.page.p15,
+.page.p16 .singlePage,
+.page.p24,
+.page.p25,
+.page.p26,
+.page.p28,
+.page.p31,
+.page.p34,
+.page.p36 .singlePage,
+.page.p37 .singlePage {
+    -webkit-animation: sm1 4s steps(8) infinite;
+    animation: sm1 4s steps(8) infinite;
+}
+.page.p13,
+.page.p19,
+.page.p20,
+.page.p21 {
+    -webkit-animation: sm2 2s steps(3) infinite;
+    animation: sm2 2s steps(3) infinite;
+}
+/*
+.page.p3-1 .match .join-mapas,
+.page.p3-1-1 .match .join-mapas,
+.page.p3-1-2 .match .join-mapas {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+.page.p3-1 .match img:nth-child(2),
+.page.p3-1-1 .match img:nth-child(2),
+.page.p3-1-2 .match img:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}*/
+/*Elementos girando*/
+.patron-anim {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.patron-anim > div {
+    position: absolute;
+}
+.patron-anim > div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 15vh;
+    height: 15vh;
+    -webkit-animation: giraElem 16s linear infinite;
+    animation: giraElem 16s linear infinite;
+}
+.page.p12 .patron-anim > div,
+.page.p18 .patron-anim > div,
+.page.p23 .patron-anim > div {
+    width: 22vh;
+    height: 22vh;
+}
+.patron-anim > div:nth-child(1) {
+    top: 2vh;
+    left: 5.5vw;
+    -webkit-animation-delay: -20s;
+    animation-delay: -20s;
+    
+}
+.patron-anim > div:nth-child(2) {
+    top: 12vh;
+    left: 45vw;
+}
+.patron-anim > div:nth-child(3) {
+    top: 6vh;
+    left: 80vw;
+    -webkit-animation-delay: -10s;
+    animation-delay: -10s;
+}
+.patron-anim > div:nth-child(4) {
+    top: 40vh;
+    left: 4vw;
+    -webkit-animation-delay: -50s;
+    animation-delay: -50s;
+}
+.patron-anim > div:nth-child(5) {
+    top: 45vh;
+    left: 85vw;
+    -webkit-animation-delay: -5s;
+    animation-delay: -5s;
+}
+.patron-anim > div:nth-child(6) {
+    top: 76vh;
+    left: 15vw;
+    -webkit-animation-delay: -25s;
+    animation-delay: -25s;
+}
+.patron-anim > div:nth-child(7) {
+    top: 78vh;
+    left: 50vw;
+    -webkit-animation-delay: -65s;
+    animation-delay: -65s;
+}
+.patron-anim > div:nth-child(8) {
+    top: 73vh;
+    left: 75vw;
+    -webkit-animation-delay: -40s;
+    animation-delay: -40s;
+}
+/*P8*/
+.page.p8 {
+    background-image: none;
+}
+.page.p8.nivel1 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f1.png);
+}
+.page.p8.nivel2 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f2.png);
+}
+.page.p8.nivel3 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f3.png);
+}
+.page.p8.nivel4 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f4.png);
+}
+.page.p8.nivel5 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f5.png);
+}
+.page.p8.nivel6 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f6.png);
+}
+.page.p8.nivel7 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f7.png);
+}
+.page.p8.nivel8 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f8.png);
+}
+.page.p8.nivel9 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f9.png);
+}
+.page.p8.nivel10 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f10.png);
+}
+.page.p8.nivel11 .patron-anim > div {
+    background-image: url(../img/anim/r1-c1-f11.png);
+}
+/*P11*/
+.page.p11 {
+    background-image: none;
+}
+.page.p11.nivel1 .patron-anim > div {
+    background-image: url(../img/anim/r1-c2-f1.png);
+}
+.page.p11.nivel2 .patron-anim > div {
+    background-image: url(../img/anim/r1-c2-f2.png);
+}
+.page.p11.nivel3 .patron-anim > div {
+    background-image: url(../img/anim/r1-c2-f3.png);
+}
+.page.p11.nivel4 .patron-anim > div {
+    background-image: url(../img/anim/r1-c2-f4.png);
+    background-size: 110%;
+}
+.page.p11.nivel5 .patron-anim > div {
+    background-image: url(../img/anim/r1-c2-f5.png);
+    background-size: 110%;
+}
+.page.p11.nivel6 .patron-anim > div {
+    background-image: url(../img/anim/r1-c2-f6.png);
+    background-size: 108%;
+}
+.page.p11.nivel7 .patron-anim > div {
+    background-image: url(../img/anim/r1-c2-f7.png);
+    background-size: 118%;
+}
+/*P12*/
+.page.p12 {
+    background-image: none;
+}
+.page.p12 .patron-anim > div {
+    background-image: url(../img/anim/corazon-llanto.png);
+}
+/*P18*/
+.page.p18 {
+    background-image: none;
+}
+.page.p18 .patron-anim > div {
+    background-image: url(../img/anim/corazon-feliz.png);
+}
+/*P23*/
+.page.p23 {
+    background-image: none;
+}
+.page.p23.nivel1 .patron-anim > div {
+    background-image: url(../img/anim/r2-c1-f1.png);
+}
+.page.p23.nivel2 .patron-anim > div {
+    background-image: url(../img/anim/r2-c1-f2.png);
+}
+.page.p23.nivel3 .patron-anim > div {
+    background-image: url(../img/anim/r2-c1-f3.png);
+}
+/*P29*/
+.page.p29 {
+    background-image: none;
+}
+.page.p29 .patron-anim > div {
+    width: 22vh;
+    height: 22vh;
+}
+.page.p29.nivel1 .patron-anim > div {
+    width: 26vh;
+    height: 26vh;
+}
+.page.p29.nivel1 .patron-anim > div {
+    background-image: url(../img/anim/r3-c1-f1.png);
+}
+.page.p29.nivel2 .patron-anim > div {
+    background-image: url(../img/anim/r3-c1-f2.png);
+}
+.page.p29.nivel3 .patron-anim > div {
+    background-image: url(../img/anim/r3-c1-f3.png);
+}
+/*P32*/
+.page.p32 {
+    background-image: none;
+}
+.page.p32 .patron-anim > div {
+    width: 22vh;
+    height: 22vh;
+}
+.page.p32.nivel1 .patron-anim > div {
+    background-image: url(../img/anim/r3-c2-f1.png);
+}
+.page.p32.nivel2 .patron-anim > div {
+    background-image: url(../img/anim/r3-c2-f2.png);
+}
+.page.p32.nivel3 .patron-anim > div {
+    background-image: url(../img/anim/r3-c2-f3.png);
+}
+/*P35*/
+.page.p35 {
+    background-image: none;
+}
+.page.p35 .patron-anim > div {
+    width: 22vh;
+    height: 22vh;
+}
+.page.p35 .patron-anim > div {
+    background-image: url(../img/anim/r3-c3-f1.png);
+}
+
+
